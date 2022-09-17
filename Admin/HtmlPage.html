@@ -1,0 +1,564 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+    <title>
+        HRMS-Admin-Home
+    </title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link href="../Css/blue1.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/login1.css" rel="Stylesheet" type="text/css" />
+    <script language="JavaScript" type="text/javascript" src="../js/popup.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.2.2.pack.js"></script>
+    <script type="text/javascript" src="../js/ddaccordion.js"></script>
+    <link rel="stylesheet" href="../images/default.css" media="screen,projection" type="text/css" />
+    <link rel="stylesheet" href="../images/lightbox.css" media="screen,projection" type="text/css" />
+    <link href="../images/family.css" rel="stylesheet" type="text/css" />
+    <link href="../images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        ddaccordion.init({
+            headerclass: "expandable", //Shared CSS class name of headers group
+            contentclass: "submenu", //Shared CSS class name of contents group
+            collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+            defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+            animatedefault: false, //Should contents open by default be animated into view?
+            persiststate: true, //persist state of opened contents within browser session?
+            toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+            togglehtml: ["suffix", "<img src='../images/plus3.gif' class='statusicon' />", "<img src='../images/minus3.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+            animatespeed: "normal" //speed of animation: "fast", "normal", or "slow"
+        })
+    </script>
+
+    <style type="text/css">
+        /*Example CSS for the two demo scrollers*/
+        #button {
+            position: relative;
+            width: 200px;
+            height: 30px;
+            line-height: 27px;
+            display: block;
+            text-align: left;
+        }
+
+        #two {
+            background: none repeat scroll 0 0 #f3f3f3;
+            border-radius: 10px;
+            color: #333333;
+            width: 180px;
+            height: 0;
+            overflow: hidden;
+            padding-left: 5px;
+            left: 0;
+            line-height: 20px;
+            position: absolute;
+            font-size: 12px;
+            top: 30px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #button:hover > #two {
+            display: block;
+            left: 0px;
+            height: 100px;
+            z-index: 1000;
+        }
+
+        #two2 {
+            background: none repeat scroll 0 0 #f3f3f3;
+            border-radius: 10px;
+            color: #333333;
+            width: 220px;
+            height: 0;
+            overflow: hidden;
+            padding-left: 5px;
+            left: 30%;
+            line-height: 20px;
+            position: absolute;
+            font-size: 12px;
+            top: 15px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #button:hover > #two2 {
+            display: block;
+            left: 30%;
+            height: 100px;
+            z-index: 1000;
+        }
+
+        #pscroller1 {
+            width: 260px;
+            height: 110px;
+            padding: 5px;
+        }
+
+        #pscroller2 a {
+            text-decoration: none;
+        }
+
+        .someclass {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            color: #404040;
+            text-decoration: none;
+            line-height: 18px;
+        }
+
+            .someclass a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+                color: #404040;
+                text-decoration: none;
+                line-height: 18px;
+            }
+
+                .someclass a:hover {
+                    color: #1b2980;
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./Home.aspx" id="aspnetForm">
+        <div>
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgwNDMyMjA5MA9kFgJmD2QWAgIDD2QWBAIBDw8WAh4EVGV4dAUPUmFqZWV2ICAgUmFuamFuZGQCBQ9kFg4CAQ8WAh4HVmlzaWJsZWdkAgMPFgIfAWdkAgYPFgIfAWdkAggPFgIfAWdkAgoPFgIfAWdkAgwPFgIfAWdkAg4PFgIfAWdkZEfz+wLePmb7p0bCpiTGcxzmxv/h+8F37jwqd7kCfpaZ" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['aspnetForm'];
+            if (!theForm) {
+                theForm = document.aspnetForm;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <div>
+            <div class="header">
+                <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" background="../images/bg.gif">
+                    <tr>
+                        <td valign="top">
+                            <table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td valign="top" class="wht-clr"></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#ffffff">
+                                        <table width="970" height="60" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="148" valign="middle">
+                                                    <a href="~/Main.aspx" style="border: 0">
+                                                        <img src="../images/Rossel-Techsys-Logo1(1).png" alt="Acuminous Software" />
+                                                    </a>
+                                                </td>
+                                                <td width="832" valign="middle">
+                                                    <table width="98%" border="0" align="right" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="../images/5x5.gif" width="5" height="8" alt="" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="background-repeat: no-repeat;">
+                                                                <img src="../images/5x5.gif" width="5" height="12">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="background-repeat: no-repeat;">
+                                                                <table border="0" align="right" cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div id="button">
+                                                                                <div align="right">
+                                                                                    <a href="#" class="homelinks">
+                                                                                        Welcome
+                                                                                        <span id="ctl00_lblname">Rajeev   Ranjan</span>
+                                                                                    </a>&nbsp;<img src="../images/welcome-icon.jpg">
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td align="center">
+                                                                            <img src="../images/verticle-line1.gif" width="24" height="10" alt="">
+                                                                        </td>
+                                                                        <td width="70">
+                                                                            <a id="ctl00_lnkLogOut" href="javascript:__doPostBack(&#39;ctl00$lnkLogOut&#39;,&#39;&#39;)">Log Out</a>
+                                                                            &nbsp;<img src="../images/icon_logout.jpg" width="10" height="10" alt="">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="20" valign="top">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="green-bar">
+                                            <tr>
+                                                <td width="50%" height="24" valign="middle" align="left" style="padding-left: 10px;
+                                                                        font-weight: bold;">
+                                                    Admininstrator Section
+                                                </td>
+                                                <td width="50%" align="right" valign="middle">
+                                                    <a href="../Main.aspx" class="link-wht" style="padding-right: 10px;">Home Page</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="87%" height="450" align="center" valign="top" class="blue-brdr-1" colspan="3">
+
+                                        <style type="text/css">
+                                            @import "../Css/login.css";
+                                        </style>
+                                        <style type="text/css">
+                                            html, body, div, h1, h2, h3, h4, h5, h6, p, img, dl, dt, dd, ol, ul, li, table, tr, td, form, object, embed, article, aside, canvas, command, details, fieldset, figcaption, figure, footer, group, header, hgroup, legend, mark, menu, meter, nav, output, progress, section, summary, time, audio, video {
+                                                margin: 0;
+                                                padding: 0;
+                                                border: 0;
+                                            }
+
+                                            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                                                display: block;
+                                            }
+
+                                            html {
+                                                font: 81.25% arial, helvetica, sans-serif;
+                                                background: #fff;
+                                                color: #333;
+                                                line-height: 1;
+                                                direction: ltr;
+                                            }
+
+                                            a {
+                                                color: #15c;
+                                                text-decoration: none;
+                                            }
+
+                                                a:active {
+                                                    color: #d14836;
+                                                }
+
+                                                a:hover {
+                                                    text-decoration: underline;
+                                                }
+
+                                            h1, h2, h3, h4, h5, h6 {
+                                                color: #222;
+                                                font-size: 1.54em;
+                                                font-weight: normal;
+                                                line-height: 24px;
+                                                margin: 0 0 .46em;
+                                            }
+
+                                            p {
+                                                line-height: 17px;
+                                                margin: 0 0 1em;
+                                            }
+
+                                            ol, ul {
+                                                list-style: none;
+                                                line-height: 17px;
+                                                margin: 0 0 1em;
+                                            }
+
+                                            li {
+                                                margin: 0 0 .5em;
+                                            }
+
+                                            table {
+                                                border-collapse: collapse;
+                                                border-spacing: 0;
+                                            }
+
+                                            strong {
+                                                color: #222;
+                                            }
+
+                                            button, input, select, textarea {
+                                                font-family: inherit;
+                                                font-size: inherit;
+                                            }
+
+                                                button::-moz-focus-inner, input::-moz-focus-inner {
+                                                    border: 0;
+                                                }
+
+                                            .more-apps .button_aab {
+                                                background: #fff;
+                                                border: solid 1px #fff;
+                                            }
+
+                                            a.apps-promo-box {
+                                                display: block;
+                                                margin: 0 0px;
+                                                padding: 0px 0px;
+                                                border: solid 1px #fff;
+                                            }
+
+                                            .apps-promo-box:hover, .apps-promo-box:focus, .more-apps .button_aab:hover, .more-apps .button_aab:focus {
+                                                text-decoration: none;
+                                                border: solid 1px #efefef; /* #cccbc9; */
+                                                background: #efefef;
+                                            }
+
+                                            .clearfix:after {
+                                                content: ".";
+                                                display: block;
+                                                line-height: 0;
+                                                height: 0;
+                                                clear: both;
+                                                visibility: hidden;
+                                            }
+
+                                            .clearfix {
+                                                zoom: 1;
+                                                _height: 1px;
+                                            }
+
+                                            .tooltips, .tooltip-button {
+                                                position: relative;
+                                                overflow: visible !important;
+                                                z-index: 99;
+                                            }
+
+
+                                            .more-apps {
+                                                margin: 0 auto;
+                                                padding: 0;
+                                                border: 0px #000 solid;
+                                                width: 850px;
+                                                height: 550px;
+                                            }
+
+                                                .more-apps li {
+                                                    height: 120px;
+                                                    width: 145px;
+                                                }
+
+                                                .more-apps li {
+                                                    display: inline-block;
+                                                    float: left;
+                                                    margin: 40px 25px 0 0;
+                                                    padding: 0;
+                                                    position: relative;
+                                                    top: 0px;
+                                                    left: 0px;
+                                                }
+
+                                                .more-apps .button_aab {
+                                                    margin: 0px;
+                                                    padding: 15px 0;
+                                                    text-align: center;
+                                                }
+
+                                                    .more-apps .button_aab img {
+                                                        max-height: 42px;
+                                                        max-width: 42px;
+                                                    }
+
+                                                    .more-apps .button_aab .product-name {
+                                                        color: #444;
+                                                        display: block;
+                                                        font-size: 14px;
+                                                        margin-top: .5em;
+                                                        height: 52px;
+                                                        width: 140px;
+                                                    }
+                                        </style>
+                                        <div class="division">
+                                            <div class="container">
+                                                <div class="main-bg">
+
+                                                    <!--...............................MID PART.........................-->
+                                                    <div class="content">
+                                                        <div class="prod1">
+                                                            <div class="even-more-apps">
+                                                                <ul class="more-apps clearfix" id="more-apps">
+                                                                    <li class="tooltip-button">
+
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_com_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="Company/AdminPanel.aspx">
+                                                                                <img alt="Company Profile" src="../images/product/company-profile.png" />
+                                                                                <div class="product-name">
+                                                                                    Company Profile
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+
+                                                                    </li>
+                                                                    <li class="tooltip-button">
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_emp_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="Employee/AdminPanel.aspx">
+                                                                                <img alt="Employee Profile" src="../images/product/users.png" />
+                                                                                <div class="product-name">
+                                                                                    Employee Profile
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <li class="tooltip-button">
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_leave_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="../Leave/admin/leaveadmin.aspx">
+                                                                                <img alt="Leave and Attendance" src="../images/product/leave_cal.png" />
+                                                                                <div class="product-name">
+                                                                                    Leave and Attendance
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <li class="tooltip-button">
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_recruit_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="../Recruitment/Admin/Admin.aspx">
+                                                                                <img alt="Recruitment" src="../images/product/recruitment2.png" />
+                                                                                <div class="product-name">
+                                                                                    Recruitment
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <li class="tooltip-button">
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_timesheet_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="../TimeSheet/Admin/AdminPanel.aspx">
+                                                                                <img alt="Training" src="../images/product/training.png" />
+                                                                                <div class="product-name">
+                                                                                    Time Sheet
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+
+
+
+
+
+
+                                                                    <li class="tooltip-button">
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_infocenter_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="Intranet/AdminPanel.aspx">
+                                                                                <!-- <img alt="Reports" src=
+                                                                                "images/icons/product/fusion_tables-64.png">-->
+                                                                                <img alt="Reports" src="../images/product/reports.png" />
+                                                                                <div class="product-name">
+                                                                                    Information Center
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="tooltip-button">
+                                                                        <div id="ctl00_ContentPlaceHolder1_dv_payroll_module" class="button_aab">
+                                                                            <a class="apps-promo-box" href="../payroll/admin/Payrolladmin.aspx">
+
+                                                                                <img alt="Payroll" src="../images/product/payroll1.png" />
+                                                                                <div class="product-name">
+                                                                                    Payroll
+                                                                                </div>
+                                                                                <div class="tooltip-content">
+                                                                                    &nbsp;
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+
+                                                                    <li class="tooltip-button">
+
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="clear: both;">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--...............................END MID PART.........................-->
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="footer">
+                <div class="main">
+                    <table>
+                        <tr>
+                            <!--<td style="color:White;">
+                                Powered By:- Ricoh India Ltd. All Rights Reserved.
+                            </td>-->
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1AD27477" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAJlDJcAn1T5+4yXENOur10xUankFR0rGmtxkchbrVlbnqiUmicEDsLVtC0g1OVj2+gCplnp0gKCPlqSAoceEUKp" />
+        </div>
+    </form>
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"1c7412d6297d4b0eb8b738ed349baf80"}
+    </script>
+    <script type="text/javascript" src="http://localhost:64496/77e6c211eaf64ee093515c96b613b6ff/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>

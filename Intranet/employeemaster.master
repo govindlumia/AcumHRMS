@@ -1,0 +1,266 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="employeemaster.master.cs"
+    Inherits="Employee_EmployeeMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <title>Acuminous Software Pvt. Ltd</title>
+    <style type="text/css" media="all">
+@import "../css/blue1.css";
+@import "../css/example.css";
+</style>
+   <link rel="stylesheet" href="../images/default.css" media="screen,projection"
+        type="text/css" />
+    <link rel="stylesheet" href="../images/lightbox.css" media="screen,projection"
+        type="text/css" />
+    <link href="../images/family.css" rel="stylesheet" type="text/css" />
+    <link href="../images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/tabber.js"></script>
+
+    <script type="text/javascript">
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" class="bg">
+                        <table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td valign="top" class="wht-clr">
+                                    <!--......................HEADER..............................-->
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td height="5" colspan="2">
+                                            </td>
+                                        </tr>
+                                         <tr>
+                                <td bgcolor="#ffffff">
+                                    <table width="970" height="60" border="0" align="center" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="148" valign="middle">
+                                                <a href="~/Main.aspx" style="border: 0">
+                                                    <img src="../images/Rossel-Techsys-Logo1(1).png" alt="Acuminous Software" />
+                                                </a>
+                                            </td>
+                                            <td width="832" valign="middle">
+                                                <table width="98%" border="0" align="right" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td>
+                                                            <img src="../images/5x5.gif" width="5" height="8">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-repeat: no-repeat;">
+                                                            <img src="../images/5x5.gif" width="5" height="12" alt="">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-repeat: no-repeat;">
+                                                            <table border="0" align="right" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <div id="button">
+                                                                            <div align="right">
+                                                                                <a href="#" class="homelinks">Welcome
+                                                                                    <asp:Label runat="server" ID="lblname" Text=""></asp:Label>
+                                                                                </a>&nbsp;<img src="../images/welcome-icon.jpg">
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </td>
+                                                                    <td align="center">
+                                                                        <img src="../images/verticle-line1.gif" width="24" height="10" alt="">
+                                                                    </td>
+                                                                    <td width="70">
+                                                                        <asp:LinkButton runat="server" ID="lnkLogOut" OnClick="lnkLogOut_Click">Log Out</asp:LinkButton>
+                                                                        &nbsp;<img src="../images/icon_logout.jpg" width="10" height="10" alt="">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                                    </table>
+                                    <!--......................END HEADER..............................-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="20" valign="middle" class="green-bar" align="right">
+                                     <a href="../Main.aspx" class="link-wht" style="padding-right: 10px;">Home Page</a></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" class="light-blue">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td width="12%" valign="top" class="blue-brdr-new">
+                                                <!--......................LEFT PART.................-->
+                                                <table width="140" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td style="height: 7px">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top" align="center">
+                                                            
+                                                            <img style="border: white 1px solid;" src='' runat="server" id="imageProf" width="70"
+                                                                                                                                height="80" alt="" />
+                                                                                                                                </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height: 10px">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="91%" height="20" align="center" valign="middle">
+                                                            <asp:Label ID="lblnm" runat="server"></asp:Label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="5">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <!--.......................LEFT NAVIGATION..................-->
+                                                            <table width="100%" border="0" cellpadding="2" cellspacing="0">
+                                                                <tr>
+                                                                    <td width="15%">
+                                                                        <img src="../images/icon_user.jpg" width="16" height="16"  alt=""/></td>
+                                                                    <td width="85%" class="txt01">
+                                                                        Profile</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="../Admin/Employee/viewempprofile.aspx" class="link01" target="content">Employee Data</a></td>
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>&nbsp;</td>
+                                                                 <%--   <td>
+                                                                        <a href="#">Pay slips</a></td>
+                                                                </tr>--%>
+                                                                 <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="changepassword.aspx" class="link01" target="content">Change Password</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="../Leave/AttendanceReport.aspx" class="link01" target="content">Attendance</a></td>
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                    <%--    <a href="../payroll/admin/viewdeclaration.aspx" class="link01" target="content">Self Declaration</a>--%>
+
+                                                                        <a href="../payroll/viewdeclarationdetail.aspx" class="link01" target="content">Self Declaration</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <a href="#">Ratings ( KRA)</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>
+                                                                        <a href="../payroll/admin/paystructureempview.aspx" class="link01" target="content">Salary Details</a></td>
+                                                                </tr>
+                                                               <%-- <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="#" class="link01" target="">Canteen</a></td>
+                                                                </tr>--%>
+                                                                <%--<tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="../Leave/Admin/viewdutyrosterEmployee.aspx" class="link01" target="content">My
+                                                                            Duty Roster</a></td>
+                                                                </tr>--%>
+                                                               <%-- <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="#" class="link01" target="">Payroll Declaration</a></td>
+                                                                </tr>--%>
+                                                               <%-- <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="#" class="link01" target="">
+                                                                            Projected Yearly Tax</a>
+                                                                    </td>
+                                                                </tr>--%>
+                                                               <%-- <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="#" class="link01" target="">
+                                                                            Monthly Tax Paid</a></td>
+                                                                </tr>--%>
+                                                                <%-- <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="#" class="link01" target="">
+                                                                            View Payslip</a></td>
+                                                                </tr>--%>
+                                                               <%-- <tr>
+                                                                    <td>
+                                                                        &nbsp;</td>
+                                                                    <td>
+                                                                        <a href="../Leave/holidaylist.aspx" class="link01" target="content">Holiday List</a></td>
+                                                                </tr>--%>
+
+                                                            </table>
+                                                            <!--.........................END LEFT NAVIGATION.......................-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td valign="top">
+                                                            &nbsp;</td>
+                                                    </tr>
+                                                </table>
+                                                <!--......................END LEFT PART.................-->
+                                            </td>
+                                            <td width="1%" valign="top">
+                                                <img src="../images/5x5.gif" width="10" height="5" alt="" /></td>
+                                            <td width="87%" valign="top" class="blue-brdr-new">
+                                                <asp:ContentPlaceHolder ID="cplhld1" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                        </tr>
+                        </table>
+        </div>
+         <div class="footer">
+          <%--  <div class="main">
+               Powered By:- Ricoh India Ltd. All Rights Reserved.
+            </div>--%>
+        </div>
+    </form>
+</body>
+</html>

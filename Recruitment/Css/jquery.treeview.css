@@ -1,0 +1,77 @@
+body {
+	 font: 12px Arial, Helvetica, sans-serif; color: #333;
+}
+.blue-brdr {
+ border: 1px solid #c9dffb; background:#fff; padding:0px;
+}
+ul,li {
+	 margin:0; padding:0;
+}
+.treeview ul li {
+	 background-color:#eff7fa; border-bottom:1px solid #c9dffb; background-image:none; line-height:27px;
+}
+.treeview ul li a {
+	 font: bold 11px Arial, Helvetica, sans-serif; color: #02679c; text-decoration: none; padding:0; margin:0;
+}
+.treeview ul li a:hover {
+	 font: bold 11px Arial, Helvetica, sans-serif; color: #02679c; text-decoration: none;
+}
+.treeview ul li ul li {
+	background: #fff url(../images/arrows1.gif) no-repeat 0px 9px; margin-left:17px; border-bottom:none; line-height:22px;
+}
+.treeview ul li ul li a {
+	 font: normal 11px Arial, Helvetica, sans-serif; color: #02679c; text-decoration: none; padding: 0px 0 0px 9px;
+}
+.treeview ul li ul li a:hover {
+	margin: 0; font: normal 11px Arial, Helvetica, sans-serif; color: #02679c; text-decoration: none;
+}
+.treeview, .treeview ul { 
+	padding: 0; margin:0; 
+   list-style: none;
+}
+
+.treeview ul {
+	background-color: white;
+	margin-top: 0px;
+}
+
+.treeview .hitarea {
+	/*background: url(../images/treeview-default.gif) -64px -24px no-repeat;*/ background:url(../images/minus3.gif) no-repeat 3px 10px;
+	height: 20px;
+	width: 17px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline; 
+	float:none;
+}
+
+.treeview li { 
+ margin: 0; padding: 0px 0px 1px 0px !important; background: url(../images/nav-head.jpg) repeat-x top; font: bold 12px/30px Arial, Helvetica, sans-serif; color:#08486d;
+}
+
+/*.treeview a.selected {
+	background-color: #eee;
+}
+*/
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: #000; cursor: pointer; }
+
+/*.treeview li { background: url(images/treeview-default-line.gif) 0 0 no-repeat; }*/
+/*.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }*/
+
+.treeview .expandable-hitarea { background:url(../images/plus3.gif) no-repeat 3px 10px; }
+
+/*.treeview li.last { background-position: 0 -1766px }*/
+/*.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(images/treeview-default.gif); }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }*/
+
+/*.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }*/
+
+
+
+

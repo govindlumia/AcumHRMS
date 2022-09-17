@@ -1,0 +1,9 @@
+Insert into LINKS (id,[linktitle],[url],[run_status],[category],[priority])
+Values (9,'Social Networking','myjakartaglobe/mycommunity.aspx',0,'Enterprise Link',0)
+
+Select * from tbl_login where empcode='97064'
+
+Alter Table tbl_login add EmailId varchar(50)
+
+Update tbl_login set  EmailId = 'arun@gmail.com' where empcode='97064'
+

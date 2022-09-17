@@ -1,0 +1,986 @@
+﻿
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+
+    </title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
+    <link href="../../Css/blue1.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../images/default.css" media="screen,projection" type="text/css" />
+    <link rel="stylesheet" href="../../images/lightbox.css" media="screen,projection" type="text/css" />
+    <link href="../../images/family.css" rel="stylesheet" type="text/css" />
+    <link href="../../images/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        /*Example CSS for the two demo scrollers*/
+        #button {
+            position: relative;
+            width: 200px;
+            height: 30px;
+            line-height: 27px;
+            display: block;
+            text-align: left;
+        }
+
+        #two {
+            background: none repeat scroll 0 0 #f3f3f3;
+            border-radius: 10px;
+            color: #333333;
+            width: 180px;
+            height: 0;
+            overflow: hidden;
+            padding-left: 5px;
+            left: 0;
+            line-height: 20px;
+            position: absolute;
+            font-size: 12px;
+            top: 30px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #button:hover > #two {
+            display: block;
+            left: 0px;
+            height: 100px;
+            z-index: 1000;
+        }
+
+        #two2 {
+            background: none repeat scroll 0 0 #f3f3f3;
+            border-radius: 10px;
+            color: #333333;
+            width: 220px;
+            height: 0;
+            overflow: hidden;
+            padding-left: 5px;
+            left: 30%;
+            line-height: 20px;
+            position: absolute;
+            font-size: 12px;
+            top: 15px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #button:hover > #two2 {
+            display: block;
+            left: 30%;
+            height: 100px;
+            z-index: 1000;
+        }
+
+        #pscroller1 {
+            width: 260px;
+            height: 110px;
+            padding: 5px;
+        }
+
+        #pscroller2 a {
+            text-decoration: none;
+        }
+
+        .someclass {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            color: #404040;
+            text-decoration: none;
+            line-height: 18px;
+        }
+
+            .someclass a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+                color: #404040;
+                text-decoration: none;
+                line-height: 18px;
+            }
+
+                .someclass a:hover {
+                    color: #1b2980;
+                    text-decoration: underline;
+                }
+    </style>
+    <script language="javascript" type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../js/popup.js"></script>
+    <script type="text/javascript" src="../../js/jquery-1.2.2.pack.js"></script>
+    <script type="text/javascript" src="../../js/ddaccordion.js"></script>
+    <script type="text/javascript">
+        ddaccordion.init({
+            headerclass: "expandable", //Shared CSS class name of headers group
+            contentclass: "submenu", //Shared CSS class name of contents group
+            collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+            defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+            animatedefault: false, //Should contents open by default be animated into view?
+            persiststate: true, //persist state of opened contents within browser session?
+            toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+            togglehtml: ["suffix", "<img src='../../images/plus3.gif' class='statusicon' />", "<img src='../../images/minus3.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+            animatespeed: "normal" //speed of animation: "fast", "normal", or "slow"
+        })
+    </script>
+    <script type="text/javascript">
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+        function goBack() {
+            window.history.back()
+        }
+    </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./PrintPDF.aspx?FormId=1&amp;EmpCode=20120065" id="aspnetForm">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNTU2MTk5MTQPZBYCZg9kFgICAw9kFgICAQ9kFgICAQ8PFgweCUtSQUZvcm1JRCgpWVN5c3RlbS5JbnQ2NCwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5ATEeC1VzZXJFbXBDb2RlBQgyMDEyMDA2NR4IRHRSYXRpbmcywwoAAQAAAP////8BAAAAAAAAAAwCAAAATlN5c3RlbS5EYXRhLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUBAAAAFVN5c3RlbS5EYXRhLkRhdGFUYWJsZQMAAAAZRGF0YVRhYmxlLlJlbW90aW5nVmVyc2lvbglYbWxTY2hlbWELWG1sRGlmZkdyYW0DAQEOU3lzdGVtLlZlcnNpb24CAAAACQMAAAAGBAAAAN4FPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTE2Ij8+DQo8eHM6c2NoZW1hIHhtbG5zPSIiIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6bXNkYXRhPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1tc2RhdGEiPg0KICA8eHM6ZWxlbWVudCBuYW1lPSJUYWJsZTEiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4czpzZXF1ZW5jZT4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iUmF0aW5nRnJvbSIgdHlwZT0ieHM6aW50IiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iUmF0aW5nVG8iIHR5cGU9InhzOmludCIgbXNkYXRhOnRhcmdldE5hbWVzcGFjZT0iIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICA8L3hzOnNlcXVlbmNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCiAgPHhzOmVsZW1lbnQgbmFtZT0idG1wRGF0YVNldCIgbXNkYXRhOklzRGF0YVNldD0idHJ1ZSIgbXNkYXRhOk1haW5EYXRhVGFibGU9IlRhYmxlMSIgbXNkYXRhOlVzZUN1cnJlbnRMb2NhbGU9InRydWUiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4czpjaG9pY2UgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgLz4NCiAgICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8L3hzOmVsZW1lbnQ+DQo8L3hzOnNjaGVtYT4GBQAAALgCPGRpZmZncjpkaWZmZ3JhbSB4bWxuczptc2RhdGE9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLW1zZGF0YSIgeG1sbnM6ZGlmZmdyPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1kaWZmZ3JhbS12MSI+DQogIDx0bXBEYXRhU2V0Pg0KICAgIDxUYWJsZTEgZGlmZmdyOmlkPSJUYWJsZTExIiBtc2RhdGE6cm93T3JkZXI9IjAiPg0KICAgICAgPFJhdGluZ0Zyb20+MTwvUmF0aW5nRnJvbT4NCiAgICAgIDxSYXRpbmdUbz41PC9SYXRpbmdUbz4NCiAgICA8L1RhYmxlMT4NCiAgPC90bXBEYXRhU2V0Pg0KPC9kaWZmZ3I6ZGlmZmdyYW0+BAMAAAAOU3lzdGVtLlZlcnNpb24EAAAABl9NYWpvcgZfTWlub3IGX0J1aWxkCV9SZXZpc2lvbgAAAAAICAgIAgAAAAAAAAD//////////wseDEN1cnJlbnRMZXZlbGYeDEtSQVNldHRpbmdJRCgrBAEyHgdFbXBDb2RlZGQWAgICD2QWIgIBDw8WAh4EVGV4dAUNUmFqZWV2IFJhbmphbmRkAgMPDxYCHwYFCDIwMTIwMDY1ZGQCBQ8PFgIfBgUDTUdSZGQCBw8PFgIfBgUDQ09PZGQCCQ8PFgIfBgULMTYtRmViLTIwMTJkZAINDw8WAh8GBQgxNyBZZWFyc2RkAg8PDxYCHwYFFkphbnVhcnktRGVjZW1iZXIoMjAxNSlkZAIRDzwrABEDAA8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAIDZAEQFgAWABYADBQrAAAWAmYPZBYIAgEPZBYCZg9kFgoCAQ8PFgIfBgUHUHJpbWFyeWRkAgMPDxYCHwYFBTYwLjAwZGQCBQ8PFgIfBgUBMWRkAgcPDxYCHwYFATFkZAIJDzwrABEDAA8WBB8HZx8IAgFkARAWABYAFgAMFCsAABYCZg9kFgQCAQ9kFgJmD2QWFgIBDw8WAh8GBQE4ZGQCAw8PFgIfBgUZUHJpbWFyeSBLUkEgdGVzdCByZXF1aXJlZGRkAgUPDxYCHwYFBTYwLjAwZGQCBw8PFgIfBgUBNGRkAgsPDxYCHwZlZGQCDQ8PFgIfBmVkZAIPDw8WAh8GBQE0ZGQCEQ8PFgIfBmVkZAITDw8WAh8GZWRkAhUPDxYCHwYFATRkZAIXDw8WAh8GBQMyLjRkZAICDw8WAh4HVmlzaWJsZWhkZAICD2QWAmYPZBYKAgEPDxYCHwYFCVNlY29uZGFyeWRkAgMPDxYCHwYFBTI1LjAwZGQCBQ8PFgIfBgUBNGRkAgcPDxYCHwYFATFkZAIJDzwrABEDAA8WBB8HZx8IAgFkARAWABYAFgAMFCsAABYCZg9kFgQCAQ9kFgJmD2QWFgIBDw8WAh8GBQE5ZGQCAw8PFgIfBgUbU2Vjb25kYXJ5IEtSQSB0ZXN0IHJlcXVpcmVkZGQCBQ8PFgIfBgUFMjUuMDBkZAIHDw8WAh8GBQEzZGQCCw8PFgIfBmVkZAINDw8WAh8GZWRkAg8PDxYCHwYFATRkZAIRDw8WAh8GZWRkAhMPDxYCHwZlZGQCFQ8PFgIfBgUBNGRkAhcPDxYCHwYFAzEuMGRkAgIPDxYCHwloZGQCAw9kFgJmD2QWCgIBDw8WAh8GBRRPcGVyYXRpb24gRXhjZWxsZW5jZWRkAgMPDxYCHwYFBTE1LjAwZGQCBQ8PFgIfBgUBOGRkAgcPDxYCHwYFATFkZAIJDzwrABEDAA8WBB8HZx8IAgFkARAWABYAFgAMFCsAABYCZg9kFgQCAQ9kFgJmD2QWFgIBDw8WAh8GBQIxMGRkAgMPDxYCHwYFJk9wZXJhdGlvbiBFeGNlbGxlbmNlIEtSQSB0ZXN0IHJlcXVpcmVkZGQCBQ8PFgIfBgUFMTUuMDBkZAIHDw8WAh8GBQE0ZGQCCw8PFgIfBmVkZAINDw8WAh8GZWRkAg8PDxYCHwYFATRkZAIRDw8WAh8GZWRkAhMPDxYCHwZlZGQCFQ8PFgIfBgUBNGRkAhcPDxYCHwYFAzAuNmRkAgIPDxYCHwloZGQCBA8PFgIfCWhkZAITDzwrABEDAA8WBB8HZx8IAgFkARAWABYAFgAMFCsAABYCZg9kFgYCAQ9kFgJmD2QWCAIBDw8WAh8GBRVTa2lsbHMgdGVzdCBkYXRhIGhlcmVkZAIDDw8WAh8GBRVTa2lsbHMgdGVzdCBkYXRhIGhlcmVkZAIFDw8WAh8GBQEzZGQCBw8PFgIfBgUBNGRkAgIPDxYCHwloZGQCAw8PFgIfCWhkZAIVDzwrABEDAA8WBB8HZx8IAgFkARAWABYAFgAMFCsAABYCZg9kFgQCAQ9kFgJmD2QWBAIBDw8WAh8GBRJUZXN0IFRhcmluaW5nIERhdGFkZAIDDw8WAh8GBRkwMSBKYW4gMjAxNiAtIDAxIEphbiAyMDE2ZGQCAg8PFgIfCWhkZAIXDzwrABEDAA8WBB8HZx8IAgJkARAWABYAFgAMFCsAABYCZg9kFgYCAQ9kFgJmD2QWCAIBDw8WAh8GBQlUZWNobmljYWxkZAIDDw8WAh8GBQExZGQCBQ8PFgIfBgUGSnF1ZXJ5ZGQCBw8PFgIfBgUBMWRkAgIPZBYCZg9kFggCAQ8PFgIfBgUJVGVjaG5pY2FsZGQCAw8PFgIfBgUBMWRkAgUPDxYCHwYFC0RhdGEgQ2VudHJlZGQCBw8PFgIfBgUBNmRkAgMPDxYCHwloZGQCGQ88KwARAgEQFgAWABYADBQrAABkAhsPPCsAEQIBEBYAFgAWAAwUKwAAZAIdDzwrABEDAA8WBB8HZx8IAgJkARAWABYAFgAMFCsAABYCZg9kFgYCAQ9kFgJmD2QWBAIBDw8WBB4HVG9vbFRpcAUBNx8GBSBSZWNvbW1lbmRhdGlvbiBGb3IgQ2FyZWVyIEdyb3d0aGRkAgQPDxYCHwZlZGQCAg9kFgJmD2QWBAIBDw8WBB8KBQE4HwYFHlJlY29tbWVuZGF0aW9uIEZvciBTYWxhcnkgSGlrZWRkAgQPDxYCHwZlZGQCAw8PFgIfCWhkZAIfD2QWAgIBD2QWAmYPZBYCAgEPPCsAEQMADxYEHwdnHwgCBWQBEBYAFgAWAAwUKwAAFgJmD2QWDgIBD2QWAmYPZBYEAgEPDxYCHwYFEk1hbmFnZW1lbnQgQ29tbWVudGRkAgMPDxYCHwYFBERvbmVkZAICD2QWAmYPZBYEAgEPDxYCHwYFD01hbmFnZXIgQ29tbWVudGRkAgMPDxYCHwYFBERvbmVkZAIDD2QWAmYPZBYEAgEPDxYCHwYFJE1hbmFnZXIgZm9yIGZpbmFsIFN1Ym1pc3Npb24gQ29tbWVudGRkAgMPDxYCHwYFBERvbmVkZAIED2QWAmYPZBYEAgEPDxYCHwYFEFJldmlld2VyIENvbW1lbnRkZAIDDw8WAh8GBQREb25lZGQCBQ9kFgJmD2QWBAIBDw8WAh8GBQRVc2VyZGQCAw8PFgIfBgUWS1JBIGZvciBKYW4gLSBEZWMgMjAxNWRkAgYPDxYCHwloZGQCBw8PFgIfCWhkZAIhD2QWAgIBD2QWAmYPZBYCAgEPPCsAEQIBEBYAFgAWAAwUKwAAZAIjD2QWAgIBD2QWAmYPZBYCAgEPPCsAEQIBEBYAFgAWAAwUKwAAZBgNBTRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFByaW50UERGMSRncmRPdmVyQWxsUmF0aW5nDzwrAAwBCAIBZAUwY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcmludFBERjEkZ3JkVFJldmlld2VyD2dkBTdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFByaW50UERGMSRncmRUcmFpbmluZ0VtcGxveWVlDzwrAAwBCAIBZAU3Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcmludFBERjEkZ3JkVHJhaW5pbmdBdHRlbmRlZA88KwAMAQgCAWQFMGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUHJpbnRQREYxJGdyZFByb21vdGlvbg88KwAMAQgCAWQFMGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUHJpbnRQREYxJGdyZFRDb21tZW50cw9nZAVGY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcmludFBERjEkZ3JkT3ZlckFsbFJhdGluZyRjdGwwNCRncmREZXRhaWxzMg88KwAMAQgCAWQFRmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUHJpbnRQREYxJGdyZE92ZXJBbGxSYXRpbmckY3RsMDIkZ3JkRGV0YWlsczIPPCsADAEIAgFkBS5jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFByaW50UERGMSRncmRIaXN0b3J5DzwrAAwBCAIBZAU3Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcmludFBERjEkZ3JkS0NvbW1lbnRzSGlzdG9yeQ9nZAUtY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcmludFBERjEkZ3JkU2tpbGxzDzwrAAwBCAIBZAUvY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcmludFBERjEkZ3JkVE1hbmFnZXIPZ2QFRmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkUHJpbnRQREYxJGdyZE92ZXJBbGxSYXRpbmckY3RsMDMkZ3JkRGV0YWlsczIPPCsADAEIAgFkL3GT74fYObPOgAREj6mLqTs+FuzUR3aqg6wUAjHuhZw=" />
+        </div>
+
+        <div>
+            <div class="header">
+                <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" background="../images/bg.gif">
+                    <tr>
+                        <td width="100%" height="450" align="left" valign="top" class="blue-brdr-1">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+
+                                        <input type="submit" name="ctl00$ContentPlaceHolder1$PrintPDF1$btnPDF" value="Print PDF" id="ctl00_ContentPlaceHolder1_PrintPDF1_btnPDF" />
+
+                                        <div id="ctl00_ContentPlaceHolder1_PrintPDF1_kraDiv">
+                                            <table style="width: 100%; border: 0px;">
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td style="height: 1px; text-align: center">
+                                                                    <h3>Acuminous Software </h3>
+                                                                    <br />
+                                                                    ( Division of Rossell India Ltd )<br />
+                                                                    # 74,#rd Cross , Export Promotion Industrial Park , Whitefield, Bangalore -560066<br />
+                                                                    Ph: 080-3999 9401, Fax: 3999 9400, e-mail: rossell@rosselltechsys.com
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">
+                                                                                Employee Information
+                                                                            </td>
+                                                                            <td>
+                                                                                &nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td style="width: 19%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Employee Name
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lbl_emp_name">Rajeev Ranjan</span>
+                                                                            </td>
+                                                                            <td style="width: 1%" rowspan="7">
+                                                                                &nbsp;
+                                                                            </td>
+                                                                            <td style="width: 18%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Employee Code
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lbl_emp_code">20120065</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2" style="height: 5px"></td>
+                                                                            <td colspan="2" style="height: 5px"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 19%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Category
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lbl_department">MGR</span>
+
+                                                                            </td>
+                                                                            <td style="width: 18%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Designation
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lbl_Designation">COO</span>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2" style="height: 5px"></td>
+                                                                            <td colspan="2" style="height: 5px"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 19%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Date of Joining
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lbl_dated">16-Feb-2012</span>
+                                                                            </td>
+                                                                            <td style="width: 19%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Location
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lbl_Location">Label</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2" style="height: 5px"></td>
+                                                                            <td colspan="2" style="height: 5px"></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width: 19%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Current Experience
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lblExp">17 Years</span>
+                                                                            </td>
+                                                                            <td style="width: 19%; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;">
+                                                                                Review Period
+                                                                            </td>
+                                                                            <td style="width: 31%; background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 5px 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_lblPeriod">January-December(2015)</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td style="font: bold 11px verdana; color: #d17100;">
+                                                                    Performance Review
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <table cellspacing="0" cellpadding="4" rules="all" border="0" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating" style="border-width:0px;font-family:Arial;font-size:11px;width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <th scope="col">&nbsp;</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table style="width: 100%; border: 0px;">
+                                                                                        <tr>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                                <b>
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_lblKRA">Primary</span>
+                                                                                                </b>
+                                                                                                (<span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_lblweightage">60.00</span>)
+
+
+
+
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <div>
+                                                                                                    <table cellspacing="0" cellpadding="4" rules="all" border="0" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2" style="border-width:0px;font-family:Arial;font-size:11px;width:100%;border-collapse:collapse;">
+                                                                                                        <tr>
+                                                                                                            <th scope="col">
+                                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                                    <tr>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="30%">KRA</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%">Weightage</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%">Self Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Manager Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Reviewer Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Final Rating</td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                                    <tr>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_txtKRA">Primary KRA test required</span>
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%">
+
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_Label8">60.00</span>
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_lblSelfRating">4</span>
+                                                                                                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$PrintPDF1$grdOverAllRating$ctl02$grdDetails2$ctl02$lblManagerRating" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_lblManagerRating" value="4" />
+
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_Label9">4</span>
+
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_lblRR">4</span>
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl02_grdDetails2_ctl02_lblOverAllRating">2.4</span>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table style="width: 100%; border: 0px;">
+                                                                                        <tr>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                                <b>
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_lblKRA">Secondary</span>
+                                                                                                </b>
+                                                                                                (<span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_lblweightage">25.00</span>)
+
+
+
+
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <div>
+                                                                                                    <table cellspacing="0" cellpadding="4" rules="all" border="0" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2" style="border-width:0px;font-family:Arial;font-size:11px;width:100%;border-collapse:collapse;">
+                                                                                                        <tr>
+                                                                                                            <th scope="col">
+                                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                                    <tr>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="30%">KRA</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%">Weightage</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%">Self Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Manager Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Reviewer Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Final Rating</td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                                    <tr>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_txtKRA">Secondary KRA test required</span>
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%">
+
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_Label8">25.00</span>
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_lblSelfRating">3</span>
+                                                                                                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$PrintPDF1$grdOverAllRating$ctl03$grdDetails2$ctl02$lblManagerRating" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_lblManagerRating" value="4" />
+
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_Label9">4</span>
+
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_lblRR">4</span>
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl03_grdDetails2_ctl02_lblOverAllRating">1.0</span>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table style="width: 100%; border: 0px;">
+                                                                                        <tr>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;">
+                                                                                                <b>
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_lblKRA">Operation Excellence</span>
+                                                                                                </b>
+                                                                                                (<span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_lblweightage">15.00</span>)
+
+
+
+
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <div>
+                                                                                                    <table cellspacing="0" cellpadding="4" rules="all" border="0" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2" style="border-width:0px;font-family:Arial;font-size:11px;width:100%;border-collapse:collapse;">
+                                                                                                        <tr>
+                                                                                                            <th scope="col">
+                                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                                    <tr>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="30%">KRA</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%">Weightage</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%">Self Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Manager Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Reviewer Rating</td>
+                                                                                                                        <td style="text-align: left; background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="15%">Final Rating</td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                                    <tr>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_txtKRA">Operation Excellence KRA test required</span>
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%">
+
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_Label8">15.00</span>
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_lblSelfRating">4</span>
+                                                                                                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$PrintPDF1$grdOverAllRating$ctl04$grdDetails2$ctl02$lblManagerRating" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_lblManagerRating" value="4" />
+
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_Label9">4</span>
+
+
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_lblRR">4</span>
+                                                                                                                        </td>
+                                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="15%">
+                                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdOverAllRating_ctl04_grdDetails2_ctl02_lblOverAllRating">0.6</span>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td>Over All Rating Weighted Score: </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Over All Score : </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">Skills and Competencies</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+                                                                                    <table cellspacing="0" cellpadding="2" align="Left" rules="all" border="1" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdSkills" style="border-color:#C9DFFB;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+                                                                                        <tr>
+                                                                                            <th scope="col">
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="30%">Skills</td>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="30%">Competencies</td>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="20%">Self Rating</td>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="20%">Manager's Rating</td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdSkills_ctl02_lblSkills">Skills test data here</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdSkills_ctl02_lblCompetencies">Skills test data here</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="20%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdSkills_ctl02_lblSR">3</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="20%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdSkills_ctl02_lblMR">4</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">Training Attended </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+                                                                                    <table cellspacing="0" cellpadding="2" align="Left" rules="all" border="1" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingAttended" style="border-color:#C9DFFB;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+                                                                                        <tr>
+                                                                                            <th scope="col">
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="50%">Training</td>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="50%">Duration</td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="50%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingAttended_ctl02_Label1">Test Tarining Data</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="50%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingAttended_ctl02_Label3">01 Jan 2016 - 01 Jan 2016</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td tyle="font: bold 11px verdana; color: #d17100;">Training Required - Employee </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+                                                                                    <table cellspacing="0" cellpadding="2" align="Left" rules="all" border="1" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingEmployee" style="border-color:#C9DFFB;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+                                                                                        <tr>
+                                                                                            <th scope="col">
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="50%">Training Type</td>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="50%">Training</td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="50%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingEmployee_ctl02_Label2">Technical</span>
+
+
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="50%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingEmployee_ctl02_Label5">Jquery</span>
+
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="50%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingEmployee_ctl03_Label2">Technical</span>
+
+
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="50%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdTrainingEmployee_ctl03_Label5">Data Centre</span>
+
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">Training Required - Manager </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <table style="width: 100%; border: 0px;">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">Training Required - Reviewer </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td style="font: bold 11px verdana; color: #d17100;">Promotion and Future Direction  </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <table cellspacing="0" cellpadding="2" align="Left" rules="all" border="1" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdPromotion" style="border-color:#C9DFFB;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <th scope="col">
+                                                                                    <table style="width: 100%; border: 0px;">
+                                                                                        <tr>
+                                                                                            <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="20%">Post Appraisal Actions</td>
+                                                                                            <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="10%"></td>
+                                                                                            <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="70%">Comments</td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table style="width: 100%; border: 0px;">
+                                                                                        <tr>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="20%">
+                                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdPromotion_ctl02_Label7" title="7">Recommendation For Career Growth</span>
+                                                                                            </td>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%"></td>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%"></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table style="width: 100%; border: 0px;">
+                                                                                        <tr>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="20%">
+                                                                                                <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdPromotion_ctl03_Label7" title="8">Recommendation For Salary Hike</span>
+                                                                                            </td>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="10%"></td>
+                                                                                            <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%"></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td>
+                                                                    <table width="100%">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">
+                                                                                Comments History
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+                                                                                    <table cellspacing="0" cellpadding="2" align="Left" rules="all" border="1" id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory" style="border-color:#C9DFFB;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+                                                                                        <tr>
+                                                                                            <th scope="col">
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="30%">Status</td>
+                                                                                                        <td style="background: #edf5ff; padding: 4px 0 4px 5px; border: 1px solid #c9dffb; border-right: none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;" width="70%">Comments</td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl02_lblName">Management Comment</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl02_lblDuration">Done</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl03_lblName">Manager Comment</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl03_lblDuration">Done</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl04_lblName">Manager for final Submission Comment</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl04_lblDuration">Done</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl05_lblName">Reviewer Comment</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl05_lblDuration">Done</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table style="width: 100%; border: 0px;">
+                                                                                                    <tr>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="30%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl06_lblName">User</span>
+                                                                                                        </td>
+                                                                                                        <td style="background: #f8fbff; border: 1px solid #c9dffb; border-right: none; border-top: none; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color: #013366;" width="70%">
+                                                                                                            <span id="ctl00_ContentPlaceHolder1_PrintPDF1_grdHistory_ctl06_lblDuration">KRA for Jan - Dec 2015</span>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td>
+                                                                    <table width="100%">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">
+                                                                                Training Comments History
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 100%; border: 0px;">
+                                                            <tr>
+                                                                <td>
+                                                                    <table width="100%">
+                                                                        <tr>
+                                                                            <td style="font: bold 11px verdana; color: #d17100;">
+                                                                                KRA Comments History
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div>
+
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        </div>
+
+
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>&nbsp;</div>
+            <div class="footer">
+                <div class="main">
+                    Powered By:- Ricoh India Ltd. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="37E2EC9A" />
+        </div>
+    </form>
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"e15aeffd5e694550a90c6872a47f5e92"}
+    </script>
+    <script type="text/javascript" src="http://localhost:49428/a008c49d862b4257b8ddd0dcd5cb79d6/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>

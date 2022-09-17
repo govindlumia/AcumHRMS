@@ -1,0 +1,212 @@
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+
+
+body {
+ margin:0; padding:0; background:#231f20; font-size: 11px;
+}
+:focus {
+outline: 0;
+}
+.fl {
+float:left;
+}
+.fr {
+float:right;
+}
+.input2 {
+ font: normal 12px/16px Arial, Helvetica, sans-serif; padding-left: 2px;
+}
+.input {
+ font: normal 12px/16px Arial, Helvetica, sans-serif; padding-left: 2px;
+}
+
+a {
+font-family: Verdana, Arial, Helvetica, sans-serif; color:#379ee0; text-decoration:none;
+/*	outline: none;*/
+}
+a:hover {
+	text-decoration:underline;
+}
+h1, h2, p, form, label, span, img, ul, li, div {
+ margin:0; padding:0; border:0; outline: 0; list-style:none; overflow:hidden;
+}
+.division {
+width:100%; background-color:#bcbdbc;
+}
+.container {
+  /*background: url(../images/bg.gif) repeat-y top;*/ margin:auto; padding: 0 10px;  width:90%;
+}
+.main-bg {
+ /*background: #fbfbfb url(../images/top-bg.gif) repeat-x top; */
+}
+.header {
+ margin-bottom: 15px; width:100%; font-family: Verdana, Arial, Helvetica, sans-serif; padding-left:5%;
+}
+.logo {
+ width:200px; padding-top: 25px; padding-bottom: 5px; margin:0px; height:35px;
+}
+.red {
+ font: normal 11px Verdana, Arial, Helvetica, sans-serif; color: CC0000;
+}
+
+/*----------------------MID PART------------------------*/
+.content {
+  /*margin:auto;*/ /*padding: 10px;*/ width:100%;
+}
+.content .left {
+ width:52%; float:left; background: #fff url(../images/lline.gif) repeat-x top; margin-right:1%; padding: 13px 12px 15px 12px; height:401px;
+}
+.content .left h1 {
+ height:61px; margin-bottom: 17px;
+}
+.content .left p {
+ font: normal 11px/17px Verdana, Arial, Helvetica, sans-serif; text-align:justify; color:#4d4f53;
+}
+.content .right {
+ width:40%; float:left; background:#f0f0ee url(../images/bg-2.gif) no-repeat bottom; border-top:10px solid #fff; padding: 18px 19px 0px 18px; color:#4d4f53; height:401px;
+}
+.content .right h2 {
+ color:#8b8d8e; font: bold 18px Arial, Helvetica, sans-serif; margin-bottom:7px;
+}
+.content .right p {
+ font: normal 11px/17px Verdana, Helvetica, sans-serif; text-align:justify; color:#4d4f53; border-bottom: 1px solid #dddddd; padding-bottom: 10px; margin-bottom:10px;
+}
+/*----------------------END MID PART------------------------*/
+
+/*----------------------FOOTER PART------------------------*/
+.footer {
+ width: 100%;  height:37px; background:#038ec2;
+}
+.footer .main {
+ width: 90%; margin: auto; padding-left:10px;
+}
+.footer p {
+ font: 11px/37px Arial, Helvetica, sans-serif; color:#fff;
+}
+/*----------------------END FOOTER PART------------------------*/
+.txt-orange {
+color:#DF7A00; font: bold 11px Verdana, Arial, Helvetica, sans-serif; border-bottom: 1px solid #e1e1e1;
+}
+h1 {
+margin-bottom:10px; display:block; color:#DF7A00; font: bold 11px Verdana, Arial, Helvetica, sans-serif;
+}
+label {
+font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+span {
+display:inline;
+}
+.butt {
+background: url(../images/icon-submit-arrow.jpg) no-repeat; width:19px; height:19px; border:0; cursor:pointer;
+}
+.butn_1 {
+background: url(../images/button-bg.gif) no-repeat; width:78px; height:21px; border:0; cursor:pointer;
+}
+.butn_2 {
+background: url(../images/buttn_.jpg) no-repeat; width:80px; height:21px; border:0; cursor:pointer; font: 12px/21px Arial; color:#333;
+}
+/*=================================For Page===================================*/
+.page {
+ background: #fff; border-top:10px solid #379ee0; padding: 10px;
+}
+.content1 {
+ width:100%; margin:auto; /*padding: 10px;*/
+}
+.main-bg1 {
+margin-bottom:0; width:100%;
+}
+.header-rght {
+height: 70px; padding-top:12px; text-align:right; color:#fff; width:300px;
+}
+.wht-clr {
+background:#fff;
+}
+
+A.link01:link {
+ font: 11px verdana; color: #fff; text-decoration:none;
+}
+A.link01:visited {
+ font: 11px verdana; color: #fff; text-decoration:none;
+}
+A.link01:hover {
+ font: 11px verdana; color: #fff; text-decoration:underline;
+}
+
+.txt1 {
+color:#4d4f53; font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+.pop-brdr {
+ border: 1px solid #000;
+}
+.pop1 {
+ display: none; position:absolute; background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:49.8%; top:35%;
+}
+.pop-tp-clr {
+background: #231f20; color:#fff; font: bold 11px/25px Tahoma; padding: 0 4px;
+}
+
+.vert-line {
+	 background: url(../images/vert-line.gif) repeat-x top; height:13px;
+}
+.txt01 {
+	font: 11px/17px verdana; color: #636363; text-decoration:none; text-align:justify;
+}
+.input {
+margin:0; padding:0;
+}
+
+
+/* Ayash Modify Login*/
+
+body {background:#fff;}
+.division {
+width:100%; background-color:#fff !important; }
+.content .left1 {
+ width:52%; float:left; background: #fff url(../images/Login_left.jpg)  no-repeat top; border-top:10px solid #038ec2; margin-right:0; padding: 13px 12px 15px 12px; height:401px;
+}
+.content .left1  h1{
+ font: 23px/40px bold Helvetica, Arial, Verdana, Tahoma ; color: #379ee0; margin-left: 0px;
+}
+.content .right {
+ width:40%; float:left; background:#fff url(../images/bar.gif) no-repeat left; border-top:10px solid #038ec2; margin-left:1%; padding: 18px 19px 0px 18px; color:#4d4f53; height:401px;
+}
+.content .right1 {
+ width:463px; float:left; background:#fff; color:#4d4f53; height:401px; border: 0px #000 solid;
+}
+.content .ful {
+ width:98%; float:left; background: #fff url(../images/_bg-2.jpg)  repeat-x top; border-top:10px solid #038ec2; margin-right:0; padding: 13px 12px 15px 12px; height:751px;
+}
+.content .ful  h1{
+ font: 23px/40px bold Helvetica, Arial, Verdana, Tahoma ; color: #379ee0; margin-left: 0px;
+}
+
+.txt-orange1 {
+color:#0a1267; font: bold 15px Arial, Helvetica, sans-serif; text-align:center; background: url(../images/line_login.jpg) no-repeat bottom;
+}
+.TQ_Sol {
+	font: normal 16px Arial; color:#858585; width: 370px; margin-left:220px; margin-top:120px; border:0px #000 solid; overflow:hidden;
+	}
+.TQ_Sol strong {	
+	style="color:#858585;
+}
+
+.autho_user {
+margin-top:10px; padding: 3px 5px; border-top:1px #CCC solid; font: 11px arial; text-align: left;
+}
+.forgot_pswd{
+margin-top:10px; padding: 10px 5px; border-top:1px #CCC solid; font: 11px arial; text-align: left;
+}
+

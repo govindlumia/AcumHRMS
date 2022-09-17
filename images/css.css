@@ -1,0 +1,255 @@
+/* CSS Document */
+
+
+
+/* New home Page CSS Start */
+body{
+	background-image:url(../images/bg1.gif);
+}
+#container{
+	margin:0 auto;
+	width:987px;
+	height:100%;
+}
+
+#footer .footerspacing {
+	clear:both;
+	margin:7px 0px;
+}
+#footer {
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #00365b;
+	text-decoration: none;
+	text-align:center;
+	clear:both;
+	margin:0 auto;
+	width:987px;
+}
+#footer A, #footer A:visited {
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #085a7e;
+	text-decoration: none;
+	text-align:center;
+	padding:0 5px 0 5px;
+}
+#footer A:hover, #footer A:active {
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #085a7e;
+	text-decoration: underline;
+	text-align:center;
+}
+/*.footer strong{
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: underline;
+	text-align:center;
+}*/
+#footer strong{
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF640F;
+	text-decoration: none;
+	text-align:center;
+}
+#footer span A, #footer span A:visited {
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #085a7e;
+	text-decoration: underline;
+	text-align:center;
+	padding:0 5px 0 5px;
+}
+#footer span A:hover, #footer span A:active {
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #085a7e;
+	text-decoration: none;
+	text-align:center;
+}
+#footer q {
+	font-family: "MS Sans Serif", sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #CC6600;
+	text-decoration: none;
+	text-align:center;
+	padding:0 5px 0 5px;
+}
+#header{
+	clear:both;
+	margin:0 auto;
+	width:987px;
+	height:133px;
+}
+#header .logo{
+	float:left;
+	width:199px;
+	height:83px;
+	margin:4px 0 16px 0;
+}
+#header .contact{
+	float:right;
+	width:380px;
+	margin:0 14px 0 0;
+}
+#header .ccs{
+	float:right;
+	clear:both;
+	width:380px;
+	height:66px;
+}
+
+#nav{
+	clear:both;
+	padding:12px 0 0 0 !important;
+	padding:6px 0 0 0 ;
+	margin: 0 0 0 16px;
+}
+/* Menu */
+
+#menu {
+	width: 971px;
+	clear:both;
+	height:30px;
+	margin:0 0 0 16px;
+}
+#menu a {
+	display: block;
+	float: left;
+	padding: 0px 1px 0 0px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color: #586BAA;
+}
+
+#menu a:hover {
+/*	background-image: url(images/img03.gif);
+	border-color: #FEDA8D;
+	color: #CC0000;*/
+}
+
+#menu .active a {
+/*	font-weight: bold;
+	color: #479AC6;*/
+}
+
+#col1{
+	float:left;
+	width:16px;
+}
+#colcontainer{
+	margin:10px;
+	background-color:#FFFFFF;
+}
+#col2{
+	float:left;
+	width:671px;
+}
+#col3{
+	float:left;
+	width:251px;
+	margin:0 0 0 0;
+}
+#col4{
+	float:right;
+	width:16px;
+}
+/* left side
+   --------- */
+
+.left {
+	float: left;
+	width: 707px !important;
+	width: 707px;
+	background-color:#FFFFFF;
+}
+
+
+		/* left and central column */
+		.left_side { float: left; width: 16px; }
+		.left_side1 { float: left; width: 252px !important; width: 252px; margin:10px 10px 0 0 !important; margin:10px 0px 0 0;}
+		.right_side { 
+		float: right; 
+		width: 671px !important;
+		margin: 10px 10px 10px 10px !important;
+		margin: 10px 5px 10px 5px;
+/*		background-image: url(../images/branding_bg.jpg);
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		height:635px;*/
+}
+		
+		.right_side1 { float: right; width: 18px;}
+		
+		
+/* right side
+   ---------- */
+		
+.right { float: right; width: 280px; background-color:#FFFFFF; height:100%;}
+
+/* New Home page CSS  End */
+div #copyright{
+	clear:both;
+	height:37px;
+}
+#copyrightRight{
+	float:right;
+	width:280px;
+}
+#copyrightLeft{
+	float:left;
+	width:100px;
+}
+#loginAS {
+	margin:0 0 7px 0;
+	width:252px;
+	background-image: url(../images/max_36.gif);
+	background-repeat: repeat-x;
+	height:65px;
+	clear:both;
+}
+#loginAS span{
+	background-image: url(../images/max_38.gif);
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+#loginAS .img{
+	margin:0 0 7px 0;
+}
+.RightButtons{
+	margin:0 0 10px 0;
+}
+.RightNavs{
+	margin:0 0 10px 0;
+}
+.RightPPO{
+	margin:0 0 10px 0;
+}
+div.flash{
+	clear:both;
+	margin:7px 0 0 0;
+}
+#tabs{
+	clear:both;
+	margin:7px 0 0 0;
+}
+div.tabslide{
+	clear:both;
+	background-color:#FFFFFF;
+}
+.contactbox_bg {
+	background-image: url(images/list-top.jpg);
+	background-repeat: repeat-x;
+}

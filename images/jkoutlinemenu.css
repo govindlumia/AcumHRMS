@@ -1,0 +1,46 @@
+.outlinemenu{
+position: absolute; /*leave this alone*/
+display: none; /*leave this alone*/
+width: 250px; /*default width of menu*/
+border: 2px solid #406020;
+overflow-x: hidden;
+
+}
+#mymenu2 {
+margin-left:166px; margin-top:-8px;
+
+}
+
+.outlinemenu ul{
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+}
+
+.outlinemenu ul li a{
+
+background: #558d36;
+font: normal 11px Verdana;
+color: #ffffff;
+display: block;
+width: auto;
+padding: 0px 0px 0px 8px;
+margin:0px 0px 0px 0px;
+
+text-decoration: none;
+border-bottom: 1px solid #e4f0de;
+}
+
+.outlinemenu ul li a:visited, .outlinemenu ul li a:active{
+color: #00014e;
+}
+
+.outlinemenu ul li a:hover{
+color: black;
+background: #ffffcb;
+}
+
+/* Holly Hack for IE \*/
+* html .outlinemenu li {height: 1%; }
+* html .outlinemenu li a { height: 1%; }
+/* End */

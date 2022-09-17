@@ -1,0 +1,178 @@
+body {
+ margin:0; padding:0; font: 11px Arial, Helvetica, sans-serif; color: #333; background:#fff;
+}
+ul, li, p {
+ margin:0; padding:0; list-style: none;
+}
+.fL {
+ float: left;
+}
+.fR {
+ float: right;
+}
+.header {
+ width: 100%;
+}
+.bg {
+ background: url(../images/bg.gif) repeat-y top;
+}
+.input {
+ border: 1px solid #0171b1; font: normal 11px Arial, Helvetica, sans-serif; height: 15px; width: 180px; padding-left: 2px;
+}
+.blue1 {
+ border: 1px solid #0171b1; font: normal 11px Arial, Helvetica, sans-serif; height: 15px; padding-left: 2px;
+}
+.blue4 {
+ border: 1px solid #0171b1; font: normal 11px Arial, Helvetica, sans-serif; padding-left: 2px;
+}
+textarea {
+ border: 1px solid #0171b1; font: normal 11px Arial, Helvetica, sans-serif; padding-left: 2px;
+}
+
+.wht-clr {
+ background: #fff; color: #004b6a;
+}
+.blue-bg {
+ background: #08486d; color: #fff; padding: 0 10px; font: normal 11px Tahoma, Helvetica, sans-serif;
+}
+.light-blue {
+ background: #f3f7fa; padding: 10px;
+}
+.blue-brdr {
+ border: 1px solid #c9dffb; background:#fff; padding:5px;
+}
+.btm-line {
+ border-bottom: 1px solid #c9dffb; padding: 3px 0; color:#02679c;
+}
+.frm-lft-clr123 {
+background: #edf5ff; padding: 4px 4px 4px 5px; border: 1px solid #c9dffb; border-right:none; font: bold 11px verdana, Helvetica, sans-serif; color: #013366;
+}
+.frm-lft-clr-main {
+background: #edf5ff; padding: 4px 0 4px 4px; border: 1px solid #c9dffb; border-bottom:none; font: bold 12px Arial, Helvetica, sans-serif;
+color: #013366;
+}
+.frm-rght-clr123 {
+background: #f8fbff; border: 1px solid #c9dffb; padding: 5px 0 5px 5px; font: normal 12px Arial, Helvetica, sans-serif; color:#013366;
+}
+.button {
+ background: url(../images/button-bg.gif) no-repeat; height:18px; color:#020950; font: bold 11px/15px Arial, Helvetica, sans-serif; width:78px; border:0; cursor:hand;
+}
+.button-bg {
+ background: url(../images/button-middle.jpg) repeat-x; height:18px; color:#020950; font: bold 11px/15px Arial, Helvetica, sans-serif;
+}
+.td-head {
+ background: #f6faff; font: bold 11px Arial, Helvetica, sans-serif; color:#013366;
+}
+.td-head-1 {
+background: #f6faff; padding: 4px 0 6px 5px; border: 1px solid #c9dffb; border-bottom:none; font: normal 11px Arial, Helvetica, sans-serif; color: #0379bd;
+}
+
+p {
+ font: 12px/17px Arial, Helvetica, sans-serif; color: #333; text-align:justify;
+}
+.txt01 {
+ font: bold 11px Arial; color:#02679c;
+}
+.txt02 {
+ font: bold 12px Arial, Helvetica, sans-serif; color:#d17100;
+}
+A.link01:link {
+ font: 11px verdana; color: #02679c; text-decoration:none;
+}
+A.link01:visited {
+ font: 11px verdana; color: #02679c; text-decoration:none;
+}
+A.link01:hover {
+ font: 11px verdana; color: #02679c; text-decoration:underline;
+}
+
+A.link02:link {
+ font: 12px Arial, Helvetica, sans-serif; color: #0379bd; text-decoration:none;
+}
+A.link02:visited {
+ font: 12px Arial, Helvetica, sans-serif; color: #0379bd; text-decoration:none;
+}
+A.link02:hover {
+ font: 12px Arial, Helvetica, sans-serif; color: #CC0000; text-decoration:none;
+}
+
+A.link03:link {
+ font: 11px Arial, Helvetica, sans-serif; color: #0379bd; text-decoration:none;
+}
+A.link03:visited {
+ font: 11px Arial, Helvetica, sans-serif; color: #0379bd; text-decoration:none;
+}
+A.link03:hover {
+ font: 11px Arial, Helvetica, sans-serif; color: #003655; text-decoration:none;
+}
+
+A.link04:link {
+ font: bold 11px Arial, Helvetica, sans-serif; color: #020950; text-decoration:none;
+}
+A.link04:visited {
+ font: bold 11px Arial, Helvetica, sans-serif; color: #020950; text-decoration:none;
+}
+A.link04:hover {
+ font: bold 11px Arial, Helvetica, sans-serif; color: #CC0000; text-decoration:none;
+}
+
+/*---------------------------------------FOOTER--------------------------------*/
+.footer {
+ width: 100%; background:#dee8f0; font: normal 11px Arial, Helvetica, sans-serif; color:#001e35; height:30px; border-bottom:1px solid #9dbad0;
+}
+.footer .main {
+ width: 960px; margin:auto; padding: 7px 0;
+}
+.footer .main p{
+margin:0; padding:0; float:left;
+}
+
+
+ .paging {
+font: normal 12px Arial, Helvetica, sans-serif; color: #CC0000; text-decoration:none; padding: 0 3px; border-right: 1px solid #CCCCCC;
+}
+
+A.link-blk3:link {
+font: normal 11px Arial, Helvetica, sans-serif; color: #696969; text-decoration:none;
+
+}
+A.link-blk3:visited {
+font: normal 11px Arial, Helvetica, sans-serif; color: #696969; text-decoration:none;
+
+}
+A.link-blk3:hover {
+font: normal 11px Arial, Helvetica, sans-serif; color: #0172b3; text-decoration:none;
+}
+
+.home-rl-txt2 {
+padding:3px 0px 0px 6px;
+}
+
+.border-right {
+border-right: 1px solid #eeeeee;
+}
+
+.go-btn {
+background: #0171b1; font: bold 11px Arial, Helvetica, sans-serif; color:#fff; border:none; padding: 1px 3px 2px 3px;
+}
+.input1 {
+border: 1px solid #0171b1; font: normal 11px Arial, Helvetica, sans-serif; height: 15px; padding-left: 2px;
+}
+.month {
+margin:0; padding:5px 0 0 6px;
+}
+.month ul {
+list-style:none; margin:0; padding:0 0 0 0;
+}
+.month li {
+float: left; margin:0; padding:0;
+}
+.month a {
+background: #e6f8ff; padding: 3px 17px; margin-right:1px; display:block; font: bold 11px Arial, Helvetica, sans-serif; text-decoration:none; color:#08486d; border:1px solid #c4edfe;
+}
+.month a:hover {
+background: #FF9900; padding: 3px 17px; margin-right:1px; display:block; font: bold 11px Arial, Helvetica, sans-serif; text-decoration:none; color:#000; border:1px solid #ec8e00;
+}
+.month a:focus {
+background: #FF9900; padding: 3px 17px; margin-right:1px; display:block; font: bold 11px Arial, Helvetica, sans-serif; text-decoration:none; color:#000; border:1px solid #ec8e00; outline:none;
+}

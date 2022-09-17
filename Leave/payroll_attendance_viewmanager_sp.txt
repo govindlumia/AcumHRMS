@@ -1,0 +1,127 @@
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+go
+
+
+-- =============================================================  
+-- Author: ANANT SARAN  
+-- Create date: 31 AUGUST 2010  
+-- Description: THIS PROCEDURE IS USED FOR ATTENDANCE ALLOWANCE  
+-- =============================================================  
+--[payroll_attendance_viewmanager_sp] '2010-10-01', '2010-10-31', 'Bawal','00043'  
+CREATE PROCEDURE [dbo].[payroll_attendance_viewmanager_sp]  
+@fromdate DATETIME,  
+@todate DATETIME,  
+@branch VARCHAR(50),
+@empcode VARCHAR(50)  
+AS  
+BEGIN  
+  
+SET NOCOUNT ON;   
+--select * from tbl_leave_employee_hierarchy where employeecode='10025'
+--select employeecode from tbl_leave_employee_hierarchy where approverid='97001' and hr=0
+  
+SELECT t.empcode EMPCODE,COALESCE(jD.emp_fname,'') + ' ' + coalesce(emp_m_name,'') + ' ' + coalesce(emp_l_name,'') EMPNAME,bD.branch_name BRANCH,  
+dP.department_name DEPARTMENT,  
+gD.gradename GRADE,t.total WORKINGDAYS,
+cast((ISNULL(p.total,0.0)) + ISNULL(hf.total,0.0) + ((ISNULL(cohf.total,0.0)) + (ISNULL(clhf.total,0.0)) + (ISNULL(slhf.total,0.0))) / 2.0  as decimal(4,1)) PRESENT,
+ISNULL(h.total,0) HOLIDAYS, ISNULL(w.total,0) WEEKOFF, ISNULL(a.total,0) ABSENT,
+cast(ISNULL(cl.total,0.0) + (ISNULL(clhf.total,0.0)) / 2.0 as decimal(4,1))  CL,
+cast(ISNULL(sl.total,0.0) + (ISNULL(slhf.total,0.0)) / 2.0 as decimal(4,1)) SL,
+ISNULL(el.total,0) EL, ISNULL(spl.total,0) SPL, ISNULL(mat.total,0) MATL,
+--ISNULL(pat.total,0) PATL,
+ISNULL(hf.total,0) HF--,
+--ISNULL(cohf.total,0) CO_HF,
+--ISNULL(clhf.total,0) CL_HF,
+--ISNULL(slhf.total,0) SL_HF
+
+FROM  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date BETWEEN @fromdate AND @todate  
+GROUP BY empcode   
+) t  
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date BETWEEN @fromdate AND @todate AND mode IN ('H')  
+GROUP BY empcode   
+) h ON t.empcode=h.empcode  
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date BETWEEN @fromdate AND @todate AND mode IN ('W')  
+GROUP BY empcode   
+) w ON t.empcode=w.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date BETWEEN @fromdate AND @todate AND mode IN ('P','CO')  
+GROUP BY empcode   
+) p ON t.empcode=p.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date BETWEEN @fromdate AND @todate AND mode IN ('A')  
+GROUP BY empcode   
+) a ON t.empcode=a.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('CL') 
+GROUP BY empcode   
+) cl ON t.empcode=cl.empcode  
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('SL') 
+GROUP BY empcode   
+) sl ON t.empcode=sl.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('EL') 
+GROUP BY empcode   
+) el ON t.empcode=el.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('SPL') 
+GROUP BY empcode   
+) spl ON t.empcode=spl.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('Mat. L') 
+GROUP BY empcode   
+) mat ON t.empcode=mat.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('Pat. L') 
+GROUP BY empcode   
+) pat ON t.empcode=pat.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in('HF') 
+GROUP BY empcode   
+) hf ON t.empcode=hf.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in( 'CO(HF)') 
+GROUP BY empcode   
+) cohf ON t.empcode=cohf.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in( 'CL(HF)') 
+GROUP BY empcode   
+) clhf ON t.empcode=clhf.empcode
+LEFT OUTER JOIN  
+(  
+SELECT empcode,COUNT(*) total FROM tbl_payroll_employee_attendence_detail WHERE date between @fromdate AND @todate and mode in( 'SL(HF)') 
+GROUP BY empcode   
+) slhf ON t.empcode=slhf.empcode
+LEFT OUTER JOIN tbl_intranet_employee_jobDetails jD ON jd.empcode=t.empcode  
+INNER JOIN tbl_internate_departmentdetails dP ON dP.departmentid=jD.dept_id  
+INNER JOIN tbl_intranet_branch_detail bD ON bD.branch_id=jD.branch_id  
+INNER JOIN tbl_intranet_grade gD ON jD.Grade=gD.id  
+WHERE --bD.branch_name = @branch  and 
+jD.empcode in (SELECT employeecode FROM tbl_leave_employee_hierarchy WHERE approverid=@empcode AND hr=0)
+ 
+END
+
+
+
+
+
+--select cast(round(5.0/2.0,0,1) as decimal(4,1))
+

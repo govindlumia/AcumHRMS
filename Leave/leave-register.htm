@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>KOD Intranet</title>
+<style type="text/css" media="all">
+@import "css/blue1.css";
+
+.disp {
+ display:none;
+}
+.pop2 {
+  display: block; position:absolute; background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:410px; top:30%;
+}
+fieldset {
+ margin:0; padding:0; border: 1px solid #c9dffb; padding:0 7px 10px 7px;
+}
+legend {
+ font: 12px Arial, Helvetica, sans-serif; color:#08486d; padding-bottom: 0px; padding-top: 2px;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="bg"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="wht-clr"><!--......................HEADER..............................-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="65%" height="60"><img src="../upload/logo/logo1.jpg" alt=""/></td>
+<td width="35%" align="right"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="89%" height="19" align="right"><strong>welcome</strong> vikas kumar</td>
+<td width="11%" align="center"><img src="images/welcome-icon.jpg" width="14" height="16" alt="" /></td>
+</tr>
+<tr>
+<td height="19" align="right"><a href="#" class="link01">Logout</a></td>
+<td align="center"><img src="images/log-out-icons.jpg" width="10" height="10" alt="" /></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<!--......................END HEADER..............................--></td>
+</tr>
+<tr>
+<td valign="top" class="blue-bg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%" height="24" valign="middle"><strong>Leave Management</strong></td>
+<td width="50%" align="right" valign="middle"><a href="#" class="link-wht">Home Page</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td valign="top" class="light-blue"><!--................................MID SECTION........................-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="490" valign="top" class="blue-brdr-1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" class="blue-brdr-1"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td width="3%"><img src="images/employee-icon.jpg" width="16" height="16" /></td>
+<td width="97%" class="txt01">Reports</td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td height="5" valign="top"></td>
+</tr>
+<tr>
+<td valign="top"><fieldset>
+<legend><b>Search Leave Report</b></legend>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="5" height="7"></td>
+</tr>
+<tr>
+<td width="17%" valign="middle" class="frm-lft-clr123">Branch</td>
+<td colspan="4" valign="top" class="frm-rght-clr123"><select name="select" class="select2">
+<option>select</option>
+</select></td>
+</tr>
+<tr>
+<td colspan="5" height="5"></td>
+</tr>
+<tr>
+<td valign="middle" class="frm-lft-clr123" width="17%">Department</td>
+<td width="19%" valign="top" class="frm-rght-clr123"><select name="select2" class="select2">
+<option>select</option>
+</select></td>
+<td width="1%" valign="top">&nbsp;</td>
+<td width="17%" valign="middle" class="frm-lft-clr123">Emp Code/Name</td>
+<td width="46%" valign="middle" class="frm-rght-clr123"><input type="text" name="textfield" class="input" />
+<a href="#" class="link05" onclick="document.getElementById('p3').style.display='block';">Select</a></td>
+</tr>
+<tr>
+<td colspan="5" height="5"></td>
+</tr>
+<tr>
+<td colspan="5" valign="middle" class="head-1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="11%"><strong>Template</strong>
+<input name="radiobutton" type="radio" value="radiobutton" checked="checked" onclick="document.getElementById('p1').style.display='block'; document.getElementById('p2').style.display='none';" /></td>
+<td width="89%"><strong>Date</strong>
+<input name="radiobutton" type="radio" value="radiobutton" onclick="document.getElementById('p2').style.display='block'; document.getElementById('p1').style.display='none';" /></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td colspan="5" height="5"></td>
+</tr>
+<tr>
+<td colspan="5" valign="top"><div id="p1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="17%" valign="middle" class="frm-lft-clr123">From Date</td>
+<td width="19%" valign="top" class="frm-rght-clr123"><select name="select2" class="select2">
+<option>select</option>
+</select></td>
+<td width="1%" valign="top">&nbsp;</td>
+<td width="17%" valign="middle" class="frm-lft-clr123">To Date</td>
+<td width="46%" valign="top" class="frm-rght-clr123"><select name="select3" class="select2">
+<option>select</option>
+</select></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="disp">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="17%" valign="middle" class="frm-lft-clr123">Select</td>
+<td width="83%" valign="top" class="frm-rght-clr123"><select name="select2" class="select2">
+<option>select</option>
+</select></td>
+</tr>
+</table>
+</div></td>
+</tr>
+<tr>
+<td height="10" colspan="5"></td>
+</tr>
+<tr>
+<td colspan="5" valign="top"><input type="submit" name="Submit22" value="Search" class="button" /></td>
+</tr>
+</table>
+</fieldset></td>
+</tr>
+<tr>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">&nbsp;</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<!--................................END MID SECTION........................--></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+<div class="footer">
+<div class="main">
+Powered by Teamworks Solutions Pvt. Ltd.
+</div></div>
+
+</body>
+<div id="p3" class="pop2" align="center">
+<table width="500" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="pop-brdr"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="95%" valign="top" class="pop-tp-clr" align="left">Emp Code/Name</td>
+<td width="5%" align="right" valign="top" class="pop-tp-clr"><a href="#" onclick="document.getElementById('p3').style.display='none';"><img src="images/btn-close.gif" border="0"/></a></td>
+</tr>
+<tr>
+<td colspan="2" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top"><table width="100%" border="1" cellspacing="0" cellpadding="3" bordercolor="#93b5c8" style="border-collapse:collapse;">
+<tr>
+<td colspan="3" valign="top" bgcolor="#d2e9f5"><a href="#" class="link-red"><strong>Select All</strong></a></td>
+</tr>
+<tr>
+<td width="37" height="20" valign="top">&nbsp;</td>
+<td width="200" valign="middle"><strong>Emp Code</strong></td>
+<td width="994" valign="middle"><strong>Emp Name </strong></td>
+</tr>
+<tr class="wht-clr-1" onmouseover="this.className='hover-clr'" onmouseout="this.className='out-clr-1'">
+<td valign="top"><input type="checkbox" name="checkbox" value="checkbox" id="a"/></td>
+<td valign="middle">001</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr class="wht-clr-1" onmouseover="this.className='hover-clr'" onmouseout="this.className='out-clr-1'">
+<td valign="top"><input type="checkbox" name="checkbox2" value="checkbox" id="a"/></td>
+<td valign="middle">002</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr class="wht-clr-1" onmouseover="this.className='hover-clr'" onmouseout="this.className='out-clr-1'">
+<td valign="top"><input type="checkbox" name="checkbox3" value="checkbox" id="a"/></td>
+<td valign="middle">003</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr class="wht-clr-1" onmouseover="this.className='hover-clr'" onmouseout="this.className='out-clr-1'">
+<td valign="top"><input type="checkbox" name="checkbox4" value="checkbox"/></td>
+<td valign="middle">003</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr class="wht-clr-1" onmouseover="this.className='hover-clr'" onmouseout="this.className='out-clr-1'">
+<td valign="top"><input type="checkbox" name="checkbox5" value="checkbox"/></td>
+<td valign="middle">004</td>
+<td valign="middle">&nbsp;</td>
+</tr>
+<tr>
+<td height="20" colspan="3" align="right" valign="middle"><img src="images/but-ok.gif" width="31" height="15" /></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</html>

@@ -1,0 +1,276 @@
+body {
+ margin:0; padding:0; background:#fff; font-size: 11px;
+}
+h1, h2, ul, li, div {
+ margin:0; padding:0; border:0; outline: 0; list-style:none;
+}
+h2 {
+ color:#4e4f53; font: bold 14px Arial, Helvetica, sans-serif; border-bottom:1px solid #dddddd; padding-bottom:5px; padding-top:3px; margin-bottom:8px; display:block;
+}
+.blue-brdr {
+border: 1px solid #dddddd; background:#fff; padding:0px;
+}
+.blue-brdr-1 {
+border: 1px solid #dddddd; background:#fff; padding:0px; padding:4px 4px 4px 4px;
+}
+.nav-head {
+ background: #4e4f53 url(../images/arrow.gif) no-repeat 0px 0px; height:30px; font: bold 12px/30px Verdana, Arial, Helvetica, sans-serif; padding-left: 21px; color:#fff;
+}
+
+/*---------------------------------------LEFT MENUS--------------------------------*/
+
+.glossymenu {
+ margin: 0; padding: 0; width: 210px;
+}
+.glossymenu .menuitem {
+ font: bold 11px Arial, Helvetica, sans-serif; color: #4d4f53; display: block; background-color:#f3f3f2; padding: 7px 0 7px 22px; text-decoration: none; border-bottom:1px solid #8b8d8e; position: relative;
+}
+/*.glossymenu .menuitem:active {
+ color: #4d4f53; background-color:#f3f3f2;
+}*/
+.glossymenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+background-color:#dedede; color:#000;
+}
+.glossymenu a.menuitem .statusicon{ 
+ border: none; position: absolute; top:9px; right:193px;
+}
+/*.glossymenu a.menuitem:hover{
+ background-color:#f0f0ee;WWWW
+}*/
+.glossymenu div.submenu {
+ margin: 0; padding: 0; background: #fcfcfc;
+}
+.glossymenu div.submenu ul { 
+ border-bottom:1px solid #ccc;
+}
+.glossymenu div.submenu ul li{
+ border-bottom: 1px solid #ffffff;
+}
+.glossymenu div.submenu ul li a{
+ display: block; background: url(../images/arrows.gif) no-repeat 4px 8px; font: normal 11px verdana; color: #379ee0; text-decoration: none;
+ padding:4px 0px 4px 12px;
+}
+.glossymenu div.submenu ul li a:hover{
+ text-decoration:underline;
+}
+.glossymenu div.submenu ul li span{
+ display: block; background: url(../images/dwn-arrow.gif) no-repeat 0px 3px; font: bold 11px verdana; color: #379ee0; text-decoration: none;
+ padding:4px 0px 4px 18px;
+}
+
+/*---------------------------------------END LEFT MENUS--------------------------------*/
+
+
+/*---------------------------------------LEFT MENUS--------------------------------*/
+
+.glossymenu1 {
+ margin: 0; padding: 0; width: 100%;
+}
+.glossymenu1 .menuitem {
+ font: normal 12px Arial, Helvetica, sans-serif; color: #000000; display: block; background-color:#ffffff; padding: 7px 0 7px 24px; text-decoration: none; border:1px solid #4E4F53; position: relative;
+ margin-bottom:8px;
+}
+.glossymenu .menuitem:active {
+ color: #4d4f53; background-color:#f3f3f2;
+}
+.glossymenu1 .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+background-color:#ffffff; color:#000;
+}
+.glossymenu1 a.menuitem .statusicon{ 
+ border: none; position: absolute; top:6px; right:98%;
+}
+/*.glossymenu a.menuitem:hover{
+ background-color:#f0f0ee;WWWW
+}*/
+.glossymenu1 div.submenu {
+ margin-bottom:8px; padding: 0; background: #fcfcfc;
+}
+.glossymenu1 div.submenu ul { 
+ border-bottom:1px solid #ccc;
+}
+.glossymenu1 div.submenu ul li{
+ border-bottom: 1px solid #ffffff;
+}
+.glossymenu1 div.submenu ul li a{
+ display: block; background: url(../images/arrows1.gif) no-repeat left; font: normal 11px verdana; color: #379ee0; text-decoration: none;
+ padding: 4px 0 4px 10px; margin-left:23px;
+}
+.glossymenu1 div.submenu ul li a:hover{
+ text-decoration:underline;
+}
+.glossymenu1 div.submenu ul li a:{
+ color: red; text-decoration:underline;
+}
+/*---------------------------------------END LEFT MENUS--------------------------------*/
+
+
+
+
+
+
+.txt1 {
+color:#4d4f53; font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+.txt02 {
+color:#DF7A00; font: bold 11px Verdana, Arial, Helvetica, sans-serif; height:25px;
+}
+.txt02_NP {
+color:#DF7A00; font: bold 12px Verdana, Arial, Helvetica, sans-serif; padding-bottom:8px;
+}
+.txt02_NPH {
+color:#DF7A00; font: bold 12px Verdana, Arial, Helvetica, sans-serif; padding-bottom:3px; padding-top:8px;
+}
+.txt-red {
+color:#02679c; font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+}
+.head-2 {
+font: normal 11px Verdana, Geneva, sans-serif; color:#4e4f53;
+}
+.frm-lft-clr123 {
+ background:#fff; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-right: 1px solid #e5e5e5; height:29px;
+}
+.frm-lft-clr123_NB {
+ background:#fff; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-right: 0px solid #e5e5e5; height:29px;
+}
+.frm-lft-clr123_NBH{
+ background:#fff; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-right: 0px solid #e5e5e5;
+}
+.frm-rght-clr123 {
+ background:#fff; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; padding-left:20px;
+}
+.frm-rght-clr123_NP {
+ background:#fff; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; padding-left:5px;
+}
+.frm-rght-clr1234 {
+ background:#fff; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-right:1px solid #4e4f53; border-bottom:1px solid #4e4f53;
+}
+.frm-rght-clr12345 {
+ background:#ededec; font: bold 10px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-right:1px solid #4e4f53; border-bottom:1px solid #4e4f53;
+}
+.light-gray {
+background: #f7f7f7; font: bold 10px Verdana, Geneva, sans-serif; color:#6f6f70;border-right:1px solid #4e4f53; border-bottom:1px solid #4e4f53;
+}
+.button {
+ background: url(../images/button-bg.gif) no-repeat; color:#02679c; font: bold 11px Tahoma, Helvetica, sans-serif; width:78px; border:0; cursor:hand; padding:3px 0;
+}
+.button1 {
+ background: url(../images/button-bg-1.gif) no-repeat; color:#02679c; font: bold 11px Tahoma, Helvetica, sans-serif; width:139px; border:0; cursor:hand; padding:3px 0;
+}
+.button2 {
+ background: url(../images/button-bg-2.gif) no-repeat; color:#02679c; font: bold 11px Tahoma, Helvetica, sans-serif; width:92px; border:0; cursor:hand; padding:3px 0;
+}
+.button3 {
+ background:none; color:#02679c; font: bold 10px Tahoma, Helvetica, sans-serif; width:52px; border:0; cursor:hand; padding:0px 0;
+}
+.grid-hd {
+background: #4e4f53; color:#fff; font: bold 11px Verdana, Geneva, sans-serif; border-right:1px solid #4e4f53;
+}
+.input {
+ border: 1px solid #0171b1; font: normal 12px Arial, Helvetica, sans-serif; padding-left: 2px; height:16px;
+}
+.input2 {
+ border: 1px solid #0171b1; font: normal 12px/16px Arial, Helvetica, sans-serif; padding-left: 2px; color:#333;
+}
+.select1 {
+ font: normal 11px Arial, Helvetica, sans-serif; color: #000; border: 1px solid #0171b1;
+}
+.select2 {
+ font: normal 11px Arial, Helvetica, sans-serif; color: #000;
+}
+
+A.link01:link {
+ font: bold 10px tahoma, Helvetica, sans-serif; color: #fff; text-decoration:none;
+}
+A.link01:visited {
+ font: bold 10px tahoma, Helvetica, sans-serif; color: #fff; text-decoration:none;
+}
+A.link01:hover {
+ font: bold 10px tahoma, Helvetica, sans-serif; color: #fff; text-decoration:underline;
+}
+
+A.link02:link {
+ font: normal 11px Arial, Helvetica, sans-serif; color: #379ee0; text-decoration:none;
+}
+A.link02:visited {
+ font: normal 11px Arial, Helvetica, sans-serif; color: #379ee0; text-decoration:none;
+}
+A.link02:hover {
+ font: normal 11px Arial, Helvetica, sans-serif; color: #379ee0; text-decoration:underline;
+}
+
+A.link05:link {
+ font: bold 10px tahoma, Helvetica, sans-serif; color: #379ee0; text-decoration:none;
+}
+A.link05:visited {
+ font: bold 10px tahoma, Helvetica, sans-serif; color: #379ee0; text-decoration:none;
+}
+A.link05:hover {
+ font: bold 10px tahoma, Helvetica, sans-serif; color: #379ee0; text-decoration:underline;
+}
+
+A.link06:link {
+ font: normal 11px tahoma, Helvetica, sans-serif; color: #cc0000; text-decoration:none;
+}
+A.link06:visited {
+color: #cc0000; text-decoration:none;
+}
+A.link06:hover {
+color: #000; text-decoration:underline;
+}
+
+
+
+.pop-tp-clr {
+background: #231f20; color:#fff; font: bold 11px/25px Tahoma; padding: 0 4px;
+}
+.pop1 {
+ display: none; position:absolute; background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:4%; top:20%;
+}
+.pop-brdr {
+ border: 1px solid #000;
+}
+.pop-brdr1 {
+ border: 1px solid #cccccc;
+}
+.pop2 {
+  background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:12%; top:30%; position:absolute; display:none;
+}
+.pop2_top {
+  background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:12%; top:5%; position:absolute; display:none;
+}
+.pop3 {
+  background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:0%; top:30%; position:absolute; display:none;
+}
+.pop4 {
+  background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:2%; top:12%; position:absolute; display:none;
+}
+.pop2_r {
+  background-color: #fff; z-index:1002; overflow: auto; padding:0px; left:0%; top:8%; position:relative; display:none;
+}
+.divajax {
+width:120px; height:32px; background-color:#fff; position:absolute; top:20%; left:40%; padding: 30px; border: 5px solid #9dbde4;
+}
+.txt01 {
+ font: bold 11px Arial; color:#02679c;
+}
+.light-gray1 {
+background: #fafafa; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-right:1px solid #fff;
+}
+.light-gray2 {
+background: #f0efef; font: bold 11px Verdana, Arial, Helvetica, sans-serif; color:#4d4f53; border-left:1px solid #fff; height:20px;
+}
+/*----------------Added On 10 Dec'2009 By Disha for Calendar Template of Staff Attendance report---------------*/
+.border-right {
+border-right: 0px solid #eeeeee; background-color:#fff;
+}
+.grid-clr1 {
+border-right: 0px solid #eeeeee; background-color:#f0efef; font: normal 11px Verdana, Arial, Helvetica, sans-serif; color:#333;
+}
+.khancha {
+border:1px solid #cccccc; border-collapse:collapse; font:normal 12px Arial; color:#000000; padding:5px;
+}
+.khancha1 {
+border:1px solid #cccccc; border-collapse:collapse; border-right:none; color:#DF7A00; padding:5px; color:#DF7A00; font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+

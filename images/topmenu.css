@@ -1,0 +1,60 @@
+#dropList { margin:0 auto;	height:48px; width:970px; position:relative;	font-family:Verdana, Arial, Helvetica, sans-serif;	font-size:11px; font-weight:normal; z-index:400;}
+#dropList ul#menu { margin:0;	padding:0; list-style:none;}
+#dropList ul#menu li.level1-li { float:left; height:48px; background:url(menu_divider.gif) right top no-repeat; }
+#dropList ul#menu li.level1-li.Last{background:none;}
+
+#dropList ul#menu li.level1-li a.level1-a { display:block; height:48px; float:left; padding:0 10px; text-decoration:none; line-height:45px; white-space:nowrap; color:#fff;}
+#dropList ul#menu li.sub a.level1-a { color:#fff; display:block;}
+
+#dropList ul#menu li.level1-li:hover, 
+#dropList ul#menu li.level1-li a.level1-a:hover { position:relative; background:#DBEFF8;}
+
+#dropList ul#menu li.level1-li a.level1-a:hover, 
+#dropList ul#menu li.level1-li:hover a.level1-a { color:#000;}
+
+#dropList ul#menu li.sub a.level1-a:hover { height:48px; color:#000;}
+#dropList ul#menu li.sub:hover > a.level1-a { height:48px; color:#000;}
+#dropList ul#menu li div.listHolder { position:absolute; left:-9999px; top:47px; background:#DBEFF8; padding:0;}
+
+/* IE6 only */
+#dropList table {	border-collapse:collapse;	margin:-1px -10px; font-size:1em; width:0; height:0;}
+#dropList ul#menu :hover div.listHolder {	left:0;}
+#dropList ul#menu a:hover div.listHolder { left:-1px;}
+
+#dropList ul#menu div.col1 { width:141px;}
+#dropList ul#menu div.col2 { width:270px;}
+#dropList ul#menu div.col3 { width:440px;}
+#dropList ul#menu div.col6 { width:380px;}
+#dropList ul#menu div.col7 { width:500px;}
+#dropList ul#menu div.col5 { width:480px;}
+#dropList ul#menu div.col4 { width:460px;}
+
+#dropList ul#menu a:hover div.left1, #dropList ul#menu :hover div.left1 {	left:-0px;}
+#dropList ul#menu a:hover div.left1, #dropList ul#menu :hover div.left2 {	left:-148px;}
+#dropList ul#menu a:hover div.left1, #dropList ul#menu :hover div.left3 {	left:-136px;}
+
+#dropList ul#menu div.listHolder div.listCol { display:block; float:left; padding:10px 8px 5px 6px; margin:0; width:199px;}
+#dropList ul#menu div.listHolder div.listCol ul { padding:0; margin:0;}
+#dropList ul#menu div.listHolder div.listCol ul li { padding:0; margin:0;}
+#dropList ul#menu div.listHolder div.listCol ul li a { /*background:url(../images/arw_1.gif) left 4px no-repeat;*/ text-decoration:none; color:#000; padding:0 0 0 10px; display:block; margin:0 0 10px 0;  _margin:0 0 0px 0;}
+#dropList ul#menu div.listHolder div.listCol ul li a:hover {text-decoration:underline;}
+
+#dropList ul#menu div.listHolder div.listCol ul li ul{ margin:0 0 0 15px; padding:0;}
+#dropList ul#menu div.listHolder div.listCol ul li ul li{ margin:0 0 5px 0; padding:0;}
+#dropList ul#menu div.listHolder div.listCol ul li ul li a{ color:#000; text-decoration:none; padding-left:10px; font-weight:normal; background:url(arw_left_icon.gif) left 2px no-repeat; display:block; line-height:normal; margin:0 0 5px 0;}
+
+#dropList ul#menu div.listHolder .RgtImg{float:right; position:absolute; bottom:0; right:0; padding:5px;}
+
+.listCol .mypets span {background: url("aerrow_gtlsite.png") no-repeat scroll 84px 2px; cursor:pointer;}
+.listCol .openpet span {background: url("aerrow_gtlsite-hover.png") no-repeat scroll 84px 2px; cursor:pointer;}
+
+.listCol .mypets strong {background: url("aerrow_gtlsite.png") no-repeat scroll 106px 2px; cursor:pointer;}
+.listCol .openpet strong {background: url("aerrow_gtlsite-hover.png") no-repeat scroll 106px 2px; cursor:pointer;}
+
+.listCol .mypets label {background: url("aerrow_gtlsite.png") no-repeat scroll 216px 2px; cursor:pointer;}
+.listCol .openpet label {background: url("aerrow_gtlsite-hover.png") no-repeat scroll 216px 2px; cursor:pointer;}
+
+.listCol .mypets b {background: url("aerrow_gtlsite.png") no-repeat scroll 92px 2px; cursor:pointer;}
+.listCol .openpet b {background: url("aerrow_gtlsite-hover.png") no-repeat scroll 92px 2px; cursor:pointer;}
+
+

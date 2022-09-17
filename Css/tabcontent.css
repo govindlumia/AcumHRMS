@@ -1,0 +1,62 @@
+/* CSS Document */
+
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+
+.shadetabs{
+
+padding: 2px 0px;
+margin-left: 0;
+margin-top: 0px;
+margin-bottom: 0;
+font: normal 11px Verdana;
+border-bottom: 1px solid #2f588c;
+list-style-type: none;
+text-align: left;
+color:#02679c; /*set to left, center, or right to align the menu as desired*/
+}
+
+.shadetabs li{
+
+display: inline;
+margin: 0;
+}
+
+.shadetabs li a{
+text-decoration: none;
+position: relative;
+z-index: 1;
+padding: 2px 5px;
+margin-right: 1px;
+border: 1px solid #2f588c;
+border-bottom:none;
+font-family:verdana; font-size: 11px; font-weight: bold; color: #02679c; text-decoration:none;
+background-image: url(../images/tab-inact1.jpg);
+/*background: white url(shade.gif) top left repeat-x;*/
+}
+
+/*.shadetabs li a:visited{
+color: #2d2b2b;
+}*/
+
+.shadetabs li a:hover{
+text-decoration: none;
+color: #02679c;
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+border: 1px solid #2f588c; border-bottom:none;  background: #2f588c; text-decoration: none;
+position: relative;
+top: 0px;
+color:#ffffff;
+}
+
+.shadetabs li a.selected:hover{ /*selected main tab style */
+border: 1px solid #2f588c; border-bottom:none;  background: #2f588c; text-decoration: none;
+text-decoration: none;
+color:#ffffff;
+}
+
+.tabcontent{
+
+display:none;
+}

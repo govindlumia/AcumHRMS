@@ -1,0 +1,77 @@
+<style> .textmode { mso-number-format:\@; } img{width:100px;height:60px;} </style><form name="aspnetForm" method="post" action="./EmpRepotingOfficerWiseReport.aspx" id="aspnetForm" runat="server">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+<table rules="all" border="1" style="border-color:Green;border-width:1px;border-style:solid;font-size:10;">
+	<tr>
+		<td rowspan="3" style="height:60pt;width:100pt;"><img src="../../images/Rossel-Techsys-Logo1(1).png" style="border-width:0px;" /></td><td colspan="5" style="width:700px;text-align:center;"><span style="font-family:Verdana;font-size:20pt;font-weight:bold;">Acuminous Software</span></td>
+	</tr><tr>
+		<td colspan="5" style="text-align:center;"><span style="font-family:Verdana;font-size:8pt;font-weight:bold;">Acuminous Software Pvt. Ltd</span></td>
+	</tr><tr>
+		<td colspan="5" style="text-align:center;"><span style="font-family:Verdana;font-size:7pt;font-weight:normal;">154, Sector 27, Gurugram, Haryana 122009</span></td>
+	</tr><tr>
+		<td>Report Date</td><td colspan="5" style="text-align:left;">10-Jun-2018</td>
+	</tr><tr>
+		<td>Report Name</td><td colspan="5" style="text-align:left;">Employee Officer wise report</td>
+	</tr><tr>
+		<td style="background-color:Yellow;text-align:center;">Company_Name</td><td style="background-color:Yellow;text-align:center;">Employee_Code</td><td style="background-color:Yellow;text-align:center;">EmployeeName</td><td style="background-color:Yellow;text-align:center;">Approver_One</td><td style="background-color:Yellow;text-align:center;">Approver_Two</td><td style="background-color:Yellow;text-align:center;">Subordinate</td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181020</td><td style="text-align:center;">Pooja Mathpal</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181021</td><td style="text-align:center;">Ankit Sharma</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181006</td><td style="text-align:center;">Sandhya Jha</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181007</td><td style="text-align:center;">Urvashi Rana</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181016</td><td style="text-align:center;">Shobhita Saxena</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181017</td><td style="text-align:center;">Anumeha Bhardwaj</td><td style="text-align:center;">  20181004: Rachna Jha</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181022</td><td style="text-align:center;">Mitali Jaiswal</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181005</td><td style="text-align:center;">Deepali jain</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181024</td><td style="text-align:center;">Rohit Sharma</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181025</td><td style="text-align:center;">Ashutosh  Dubey</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181027</td><td style="text-align:center;">Kumar Gaurav</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181028</td><td style="text-align:center;">Ankit Sharma</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181029</td><td style="text-align:center;">Sandhya Jha</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181026</td><td style="text-align:center;">Yashneet Tyagi</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181018</td><td style="text-align:center;">Vikas Tiwari</td><td style="text-align:center;">  20181001: Sourov Bose</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181019</td><td style="text-align:center;">Manoj Kumar</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181023</td><td style="text-align:center;">Rahul Pal</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181001</td><td style="text-align:center;">Sourov Bose</td><td style="text-align:center;">  20181001: Sourov Bose</td><td style="text-align:center;"></td><td style="text-align:center;">20181001: Sourov Bose20181002: Keerti Dwivedi20181003: Krishan Kaushik20181004: Rachna Jha20181018: Vikas Tiwari</td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181002</td><td style="text-align:center;">Keerti Dwivedi</td><td style="text-align:center;">  20181001: Sourov Bose</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181003</td><td style="text-align:center;">Krishan Kaushik</td><td style="text-align:center;">  20181001: Sourov Bose</td><td style="text-align:center;"></td><td style="text-align:center;">20181005: Deepali jain20181006: Sandhya Jha20181007: Urvashi Rana20181008: Sugandha Khandelwal20181009: Faizi Parvez20181010: Govind Sharma20181011: Sijo John20181012: Priya Bisht20181014: Abhishek Kulshrestha20181015: Dhiraj Burnwal20181016: Shobhita Saxena20181019: Manoj Kumar20181020: Pooja Mathpal20181021: Ankit Sharma20181022: Mitali Jaiswal20181023: Rahul Pal20181024: Rohit Sharma20181025: Ashutosh  Dubey20181026: Yashneet Tyagi20181027: Kumar Gaurav20181028: Ankit Sharma20181029: Sandhya Jha</td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181004</td><td style="text-align:center;">Rachna Jha</td><td style="text-align:center;">  20181001: Sourov Bose</td><td style="text-align:center;"></td><td style="text-align:center;">20181013: Sanjeev Kumar20181017: Anumeha Bhardwaj</td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181008</td><td style="text-align:center;">Sugandha Khandelwal</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181009</td><td style="text-align:center;">Faizi Parvez</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181010</td><td style="text-align:center;">Govind Sharma</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181011</td><td style="text-align:center;">Sijo John</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181012</td><td style="text-align:center;">Priya Bisht</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181013</td><td style="text-align:center;">Sanjeev Kumar</td><td style="text-align:center;">  20181004: Rachna Jha</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181014</td><td style="text-align:center;">Abhishek Kulshrestha</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr><tr>
+		<td style="text-align:center;">Acuminous Software Pvt Ltd</td><td style="text-align:center;">20181015</td><td style="text-align:center;">Dhiraj Burnwal</td><td style="text-align:center;">  20181003: Krishan Kaushik</td><td style="text-align:center;"></td><td style="text-align:center;"></td>
+	</tr>
+</table></form>

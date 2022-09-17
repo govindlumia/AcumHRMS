@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Home.Master.cs" Inherits="Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <%--<title>Acuminous Software</title>--%>
+      <title>Acuminous Software Pvt. Ltd</title>
+    <link rel="shortcut icon" href="http://teamworksindia.com/new/febicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/febicon.ico" type="image/x-icon" />
+    <link href="Css/home.css" rel="stylesheet" type="text/css" />
+    <link href="Css/blue.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bg.gif">
+            <tr>
+                <td valign="top">
+                    <table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td valign="top" class="wht-clr">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="56%" height="50" valign="middle">
+                                            <img src="images/Rossel-Techsys-Logo1(1).png" width="120px" height="40px" alt="Acuminous Software" />
+                                        </td>
+                                        <td width="44%" align="right">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td colspan="2" align="right">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="91%" height="24" align="right" valign="bottom">
+                                                        <strong>Welcome</strong>
+                                                        <asp:Label ID="lblname" runat="server"></asp:Label>
+                                                    </td>
+                                                    <td width="9%" align="center" valign="bottom">
+                                                        <img src="images/welcome-icon.jpg" width="14" height="16" alt="" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="bottom" height="17">
+                                                        <asp:LinkButton ID="lnkbtnlogout" CssClass="link01" runat="server" OnClick="lnkbtnlogout_Click">Logout</asp:LinkButton>
+                                                    </td>
+                                                    <td align="center" valign="bottom">
+                                                        <img src="images/icon_logout.jpg" width="10" height="10" alt="" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="20" valign="top">
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="green-bar">
+                                            <table width="98%" border="0" align="center" cellpadding="1" cellspacing="0">
+                                                <tr>
+                                                    <td width="110" align="center">
+                                                        <a href="main.aspx" class="link04-nolight">Home Page</a>
+                                                    </td>
+                                                    <td width="3%" align="center">
+                                                        <img src="images/verticle-line2.gif" width="60" height="10" />
+                                                    </td>
+                                                    <td width="110" align="left" valign="top">
+                                                        <div id="MENU1" style="width: 110px; padding-left: 11px;" class="myyy" onmouseover="document.getElementById('ITEMS1').style.visibility='visible'"
+                                                            onmouseout="document.getElementById('ITEMS1').style.visibility='hidden'">
+                                                            My Company
+                                                        </div>
+                                                    </td>
+                                                    <td width="3%" align="center">
+                                                        <img src="images/verticle-line2.gif" width="60" height="10" />
+                                                    </td>
+                                                    <td width="118" align="left" valign="top">
+                                                        <div id="MENU2" style="width: 118px;" class="myyy" onmouseover="document.getElementById('ITEMS2').style.visibility='visible'"
+                                                            onmouseout="document.getElementById('ITEMS2').style.visibility='hidden'">
+                                                            Information Center
+                                                        </div>
+                                                    </td>
+                                                    <td width="3%" align="center">
+                                                        <img src="images/verticle-line2.gif" width="60" height="10" />
+                                                    </td>
+                                                    <td width="110" align="left" valign="top">
+                                                        <div id="MENU3" style="width: 110px; padding-left: 11px;" class="myyy" onmouseover="document.getElementById('ITEMS3').style.visibility='visible'"
+                                                            onmouseout="document.getElementById('ITEMS3').style.visibility='hidden'">
+                                                            My Workplace
+                                                        </div>
+                                                    </td>
+                                                    <td width="3%" align="center">
+                                                        <img src="images/verticle-line2.gif" width="60" height="10" />
+                                                    </td>
+                                                    <td width="110" align="left" valign="top">
+                                                        <div id="MENU" style="width: 110px; padding-left: 11px;" class="myyy" onmouseover="document.getElementById('ITEMS').style.visibility='visible'"
+                                                            onmouseout="document.getElementById('ITEMS').style.visibility='hidden'">
+                                                            Applications
+                                                        </div>
+                                                        <div id="ITEMS" style="position: absolute; visibility: hidden; text-align: left;"
+                                                            onmouseover="this.style.visibility='visible'" onmouseout="this.style.visibility='hidden'">
+                                                            <div style="padding-top: 15px;">
+                                                                <div style="width: 282px;">
+                                                                    <div class="pop-up">
+                                                                    </div>
+                                                                    <div class="pop-up-bottom">
+                                                                        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                            <tr>
+                                                                                <td colspan="2" height="4">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="53%" valign="top">
+                                                                                    <table width="97%" border="0" align="left" cellpadding="0" cellspacing="0">
+                                                                                        <tr>
+                                                                                            <td width="12%" align="center" valign="top">
+                                                                                                <img src="images/bullet2.gif" width="8" height="9" />
+                                                                                            </td>
+                                                                                            <td width="88%" valign="top">
+                                                                                                <a href="Advance/User/Welcome.aspx" class="link-blk">Expense Management</a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td width="3%" id="adminline" runat="server" visible="false" align="center">
+                                                        <img src="images/verticle-line2.gif" width="60" height="10" />
+                                                    </td>
+                                                    <td id="admin" runat="server" visible="false" width="110" align="center">
+                                                        <a href="Admin/Home.aspx" class="link04-nolight">Admin Section</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="height: 3px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="height: 600px">
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td valign="top" width="76%">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td style="height: 200px">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top">
+                                                        <%--<img alt="" src="images/WELCOME_HRMS.jpg" />--%>
+                                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                        </asp:ContentPlaceHolder>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="1%" valign="top">
+                                            <img src="images/5x5.gif" width="12" height="5" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="8" valign="top" colspan="3">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+       <%-- <div class="main">
+         Powered By:- Ricoh India Ltd. All Rights Reserved. 
+        </div>--%>
+    </div>
+    </form>
+</body>
+</html>
